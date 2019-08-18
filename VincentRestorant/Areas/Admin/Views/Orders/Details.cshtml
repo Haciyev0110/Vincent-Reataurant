@@ -1,0 +1,63 @@
+﻿@model VincentRestorant.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    decimal Totalprice=0;
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <table class="table table-sm table-dark">
+        <thead>
+            <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Adress</th>
+                <th scope="col">Product</th>
+                <th scope="col">Count</th>
+                <th scope="col">Price</th>
+                <th scope="col">TotalPrice</th>
+                <th scope="col">Size</th>
+
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var item in Model.Ordersitems)
+                {
+                    Totalprice += (decimal)item.Orderprice;
+
+                    <td>@item.Order.User.Firstname @item.Order.User.Lastname</td>
+                    <td>@item.Order.User.Phone</td>
+                    <td>@item.Order.User.Adress</td>
+                    <td>@item.ProductSize.Product.Name</td>
+                    <td>@item.Count</td>
+                    <td>@item.Orderprice</td>
+                    <td>@item.ProductSize.Size.Name</td>
+
+
+
+
+
+                    <td></td>
+                }
+                <td>
+                    @Totalprice
+                </td>
+            </tr>
+           
+        </tbody>
+    </table>
+                    
+                        <a style="margin-top:5%" class="btn btn-success"   href="@Url.Action("Accept","Orders",new { id = Model.ID })">
+                            Accept
+                        </a>
+                    
+    </div>

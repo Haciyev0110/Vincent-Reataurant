@@ -1,0 +1,17 @@
+@import "mobHeader";
+@import "headerCon";
+@import "footer";
+@import "backtop";
+@import "blogsfullscreen";
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+
+    #fullscreen{
+        .title1{
+            .mini2{
+                letter-spacing: 0;
+            }
+        }
+    }
+   
+}

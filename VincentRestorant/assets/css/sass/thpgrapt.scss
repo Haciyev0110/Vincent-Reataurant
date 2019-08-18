@@ -1,0 +1,479 @@
+@import "mobHeader";
+@import "headerCon";
+@import "footer";
+@import "thpgrpy";
+@import "backtop";
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+
+    #discmenu{
+       
+        .menublock{
+            text-align: center;
+            padding-top: 28%;
+            padding-bottom: 23%;
+            .text{
+                .h3text{
+                    h3{
+                        color: #121618;
+                        font-size: 33px;
+                        line-height: 40px;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    #Typography{
+       
+        .main{  width: 90%;
+            .firstpart{
+                .part1{
+                    padding-top: 15%;
+                    .mini{
+                        color: #dce4e8;
+                        padding-right: 0;
+                        padding-left: 0;
+                        h1{
+                            font-size: 32px;
+                            line-height: 40px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+
+                        }
+                        h2{
+                            font-size: 30px;
+                            letter-spacing: 3px;
+                        }
+                        h3{
+                            letter-spacing: 1px;
+                            font-size: 25px;
+                            line-height: 36px;
+                        }
+                        h4{
+                            letter-spacing: 1px;
+                        }
+                        h5{
+                            letter-spacing: 1px;
+                        }
+                        h6{
+                            letter-spacing: 1px;
+                        }
+                       
+                       
+                    }
+    
+                    hr{
+                        width: 100%;
+                        height: 1px;
+                        border-color: white;
+                        opacity: 0.1;
+    
+                    }
+                    .bigtext{
+                        padding-top: 6%;
+                        h4{
+                            color: white;
+                            font-size: 25px;
+                            font-weight: 400;
+                            letter-spacing: 4px;
+    
+                        }
+                    }
+                    .smalltext1{
+                        padding-top: 4%;
+                        p{
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 30px;
+                            a{
+                                text-decoration: none;
+                                color: #ffc851;
+                                transition: 0.4s;
+                                &:hover{
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .bigtext2{
+                        padding-top: 6%;
+                        h4{
+                            color: white;
+                            font-size: 25px;
+                            font-weight: 400;
+                            letter-spacing: 4px;
+    
+                        }
+                    }
+                    
+                    .smalltext3{
+                       
+                            span{
+                                display: block;
+                                float: left;
+                                font-size: 44px;
+                                line-height: 1em;
+                                padding-right: 24px;
+                                font-weight: 700;
+                                position: relative;
+                                top: 2px;
+                                left: 2px;
+                            }
+                           
+                        }
+                        .smalltext4{
+                            p{
+                                span{
+                                    color: #ffc851;
+                                }
+                            }
+                        }
+                        .bigtext3{
+                            padding-top: 6%;
+                            h4{
+                                color: white;
+                                font-size: 25px;
+                                font-weight: 400;
+                                letter-spacing: 4px;
+        
+                            }
+                        }
+                        .bordertext1{
+                            border: 2px solid;
+                            padding: 18px 28px 21px;
+                            font-size: 14px;
+                            margin-bottom: 23px;
+                            position: relative;
+                            margin-top: 7px;
+                            border-color: #252c30;
+                            p{
+                                color: white;
+                                font-size: 14px;
+                                font-weight: 300;
+                                letter-spacing: 2px;
+                                line-height: 24px;
+                            }
+                            &:before{
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                bottom: -9px;
+                                left: 38px;
+                                width: 14px;
+                                height: 14px;
+                                transform: rotate(45deg);
+                                -webkit-transform: rotate(45deg);
+                                 -moz-transform: rotate(45deg);
+                                -o-transform: rotate(45deg);
+                                -ms-transform: rotate(45deg);
+                                border: 2px solid;
+                                border-top: none;
+                                border-left: none;
+                                z-index: 2;
+                                background-color: #121618;
+                                border-color: #252c30;
+                            }
+                        }
+                        .title{
+                            padding-top: 6%;
+                            h6{
+                                color: white;
+                                font-size: 14px;
+                                font-weight: 400;
+                                letter-spacing: 4px;
+                            }
+                        }
+                        .bordertext2{
+                            border: 2px solid;
+                            padding: 18px 28px 21px;
+                            font-size: 14px;
+                            position: relative;
+                            border-color: #252c30;
+                            display: inline-table;
+                            p{
+                                color: white;
+                                font-size: 14px;
+                                font-weight: 300;
+                                line-height: 24px;
+                                letter-spacing: 1px;
+                            }
+                            &:before{
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                bottom: -9px;
+                                left: 38px;
+                                width: 14px;
+                                height: 14px;
+                                transform: rotate(45deg);
+                                -webkit-transform: rotate(45deg);
+                                 -moz-transform: rotate(45deg);
+                                -o-transform: rotate(45deg);
+                                -ms-transform: rotate(45deg);
+                                border: 2px solid;
+                                border-top: none;
+                                border-left: none;
+                                z-index: 2;
+                                background-color: #121618;
+                                border-color: #252c30;
+                            }
+                        }
+                        .smalltext5{
+                            p{
+                                color: white;
+                                font-size: 16px;
+                                font-weight: 300;
+                                line-height: 30px;
+                            }
+                        }
+                        .smalltext6{
+                            padding-top: 5%;
+                            p{
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                            }
+                        }
+                        .list1{
+                            padding-top: 30%;
+                            ol li{
+                                list-style: none;
+                                color:white;
+                                font-size: 16px;
+                                font-weight: 300;
+                                letter-spacing: 0.2px;
+                                line-height: 30px;
+                            }
+                            ol li {counter-increment: li}
+                            ol li::before {content: counter(li); color: #ffc851;
+                                display: inline-block; width: 1em; margin-left: -1.5em;
+                                margin-right: 0.5em; text-align: right; direction: rtl}
+                           
+                        }
+                        .list2{
+                           
+                            ol li::before {content: "•"; color: #ffc851;
+                                display: inline-block; width: 1em;
+                                }
+                        }
+                        .list3{
+                           ol  li::before{
+                            padding-right: 10px;
+                            content: "\f054";
+                            font-family: FontAwesome;
+                            font-weight: 400;
+                           }
+                        }
+                        .list4{
+                            ol li::before {content: "\25E6"; color: #ffc851;
+                                display: inline-block; width: 1em;
+                                }
+                        }
+                }
+                    
+                }
+                
+               .part2{
+                   width: 100%;
+                   float: right;
+                   .serch{
+                        padding-bottom: 15%;
+                        .firstinput{
+                             input{
+                                background-color: #121618;}
+                                            
+                             button{
+                                      position: absolute;
+                                      right: 4%;
+                                      top: 19%;
+                                      outline: none;
+                                      border-style: none;
+                                      background-color: transparent;   
+                                      color: white;
+                                      cursor: pointer; } 
+                                                
+                        }
+                    }
+                    .FEATURED{
+                        .post{
+                            width: 100%;
+                            height: auto;
+                            background-color: #252c30;
+                            padding-bottom: 12%;
+                            padding-top: 12%;
+                            padding-left: 0;
+                            text-align: center;
+                            padding-right: 5%;
+                            .text{
+                                padding-bottom: 6%;
+                                h5{
+                                    color: white;
+                                    font-weight: 400;
+                                    letter-spacing: 2px;
+                                    font-size: 16px;
+                                }
+                            }
+                            .picturepart{
+                                padding-top: 14%;
+                                padding-bottom: 21%;
+                                img{
+                                    border-radius: 60%;
+                                }
+                            }
+                            .contentpart{
+                                padding-top: 7%;
+    
+                                a{
+                                    text-decoration: none;
+                                    color: white;
+                                    letter-spacing: 3px;
+                                    font-size: 14px;
+                                    transition: 0.4s;
+                                    &:hover{
+                                        color: #ffc851;
+                                    }
+                                }
+                                span{
+                                    color: white;
+                                    display: block;
+                                    padding-top: 5%;
+                                    letter-spacing: 2px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                       } 
+    
+                    .Blog{
+                        padding-top: 15%;
+                        .categories{
+                            width: 100%;
+                            height: auto;
+                            background-color: #252c30;
+                            padding-top: 12%;
+                            padding-left: 14%;
+                            padding-right: 5%;
+                            .text{
+                                h5{
+                                    color: white;
+                                    font-weight: 400;
+                                    letter-spacing: 2px;
+                                    font-size: 16px;
+                                }
+                            }
+                            .mini{
+                                    padding-top: 7%;
+                                    text-align: left;
+                                ul{
+                                    padding: 0;
+                                    li{
+                                        list-style: none;
+                                        padding-bottom: 5%;
+                                        a{text-decoration: none;
+    
+                                            color: #dce4e8;
+                                            transition: 0.4s;
+                                            &:hover{
+                                                color: #ffc851;
+                                            }
+                                        }
+                                        i{
+                                            float: right;
+                                            color: #dce4e8;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                } 
+                                ul li::after{
+                                    background: #293033;
+                                    display: block;
+                                    content: "";
+                                    width: 100%;
+                                    height: 1.5px;
+                                    margin-top: 7px;
+                                    margin-bottom: 7px;
+                                }
+                            }
+                        }
+                       
+                    } 
+                    .tags{
+                        padding-top: 15%;
+                       
+                        .lists{
+                            width: 100%;
+                            height: auto;
+                            background-color: #252c30;
+                            padding-top: 12%;
+                            padding-left: 14%;
+                            padding-right: 5%;
+                            .text{
+                                h5{
+                                    color: white;
+                                        font-weight: 400;
+                                        letter-spacing: 2px;
+                                        font-size: 16px;
+                                }
+                            }
+                            .mini{
+                                    width: 100%;
+                                    padding-top: 5%;
+                                    padding-bottom: 7%;
+                                a{
+                                    display: inline-block;
+                                     font-size: 14px !important;
+                                     line-height: 26px;
+                                     letter-spacing: 2px;
+                                     text-transform: uppercase;
+                                     border: solid 2px;
+                                     padding: 4px 9px 6px 14px;
+                                     text-decoration: none;
+                                     border-color: #31383c;
+                                     color: #dce4e8;
+                                     margin: 0 6px 10px 0;
+                                     transition: 0.4s;
+                                     &::after{
+                                        content: "\002022";
+                                        font-size: 18px;
+                                        margin-left: 5px;
+                                     }
+                                     &:hover{
+                                         color: #ffc851;
+                                         border-color: #ffc851;
+                                     }
+                                }
+                            }
+    
+                        }
+                    }  
+                    .INSTAFEED{
+                        .menuimg{
+                            
+                            .picturepart{
+                               ul{
+                                 
+                                   li{
+                                    
+                                       width: 31.3%;
+                                      
+                                   }
+                               }
+                            }
+                        }
+                       
+                    }
+                }
+                  
+            
+                  
+                  
+               
+                
+            }
+        }
+    
+}

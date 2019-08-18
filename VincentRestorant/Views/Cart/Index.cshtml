@@ -1,0 +1,289 @@
+﻿@model  IEnumerable<VincentRestorant.ViewModel.BasketProduct>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal totalprice = 0;
+    int idpro;
+
+
+}
+<!-- Discover   Our MEnu    start -->
+<section id="discmenu">
+    <div class="container menublock">
+        <div class="row text">
+            <div class="col-md-12 h3text">
+                <h3>PRODUCT DETAIL</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Discover   Our MEnu    end -->
+<!-- section    cart    start -->
+<section id="cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ptext">
+                            <p>Your cart is currently empty.</p>
+
+                        </div>
+                    </div>
+                    @if (Model != null)
+                    {
+                        <div class="container">
+                            <table id="cart" class="table table-hover table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th style="width:50%;color:white">Product</th>
+                                        <th style="width:10%;color:white">Price</th>
+                                        <th style="width:8%;color:white">Quantity</th>
+                                        <th style="width:22%;color:white" class="text-center">Subtotal</th>
+                                        <th style="width:10%;color:white"></th>
+                                    </tr>
+                                </thead>
+
+
+
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        item.Subtotal= item.Price * item.Count;
+
+                                        totalprice += item.Subtotal;
+                                        <tr>
+                                            <td data-th="Product">
+                                                <div class="row">
+
+                                                    <div class="col-sm-6 hidden-xs" style="width:50%"><img style="width:100%;" src="~/assets/Products/@item.Image" alt="..." class="img-responsive" /></div>
+                                                    <div class="col-sm-6">
+                                                        <h4 class="nomargin">@item.Name</h4>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-th="Price">$@item.Price</td>
+                                            <td data-th="Quantity">
+                                                <input data-proPrice="@item.Price"  min="1"   type="number" data-proid="@item.ID" class="form-control text-center  outp" value="@item.Count">
+                                            </td>
+                                            <td data-th="Subtotal" data-subtotal="@item.Subtotal"  class="text-center  vmf">  $  @item.Subtotal</td>
+                                            <td class="actions" data-th="">
+
+                                                <button class="btn btn-danger btn-sm    deletproduc" data-proId="@item.ID"><i class="fa fa-trash-o"></i></button>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+                                <tr class="visible-xs">
+                                  
+                                    <td class="text-center">
+                                        <strong class="proprice">Subtotal   $    @totalprice</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="hidden-xs"></td>
+                                    <td><a href="@Url.Action("Index","Chekout")" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+                                </tr>
+
+
+
+                            </table>
+
+                        </div>
+                    }
+
+                    <div class="col-md-12">
+                        <div class="linktitle">
+                            <a href="@Url.Action("Index","Home")">RETURN TO SHOP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 part2">
+                <div class="row serch">
+                    <div class="col-md-12">
+                        <div class="firstinput">
+                            <div class="input-group stylish-input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="input-group-addon">
+                                    <button type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="FEATURED">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post">
+                                <div class="row">
+                                    <div class="col-md-12  ">
+                                        <div class="text">
+                                            <h5>FEATURED POSTS</h5>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4   col-6">
+                                        <div class="picturepart">
+                                            <img src="~/assets/images/img/1-80x80.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8    col-6">
+                                        <div class="contentpart">
+                                            <a href="">HEALSY FOOD FOR HEALTHY BODY</a>
+                                            <span>April 6, 2017</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4    col-6">
+                                        <div class="picturepart">
+                                            <img src="~/assets/images/img/2-80x80.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8    col-6">
+                                        <div class="contentpart">
+                                            <a href="">FOOD DESIGN TRENDS 2016</a>
+                                            <span>April 6, 2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="Blog">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="categories">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text">
+                                            <h5>
+                                                BLOG CATEGORIES
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mini">
+                                            <ul>
+                                                @foreach (var item in ViewBag.pro)
+                                                {
+                                                    <li>
+                                                        <a href="@Url.Action("Index","TagCategories",new {categ=item.ID })">@item.Name</a>
+                                                        <i class="fas fa-angle-right"></i>
+                                                    </li>
+
+
+                                                }
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tags">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="lists">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text">
+                                            <h5>TAGS</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mini">
+                                            @foreach (var item in ViewBag.pro)
+                                            {
+                                                <a href="@Url.Action("Index","TagCategories",new {categ=item.ID })">@item.Name</a>
+
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row INSTAFEED">
+                    <div class="col-md-12">
+                        <div class="menuimg">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text">
+                                        <h5>INSTAFEED</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="picturepart">
+                                        <ul>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/burger/17817627_1991094447779194_2141034917813813248_n.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17596453_1394335877325424_5306473291534303232_n.jpg" alt="">
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17662462_240934883045697_4488760463823208448_n.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17663134_213463345806971_2661189821392748544_n.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17663740_2273891269502238_7837518096255418368_n.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17818827_1383669068365197_1027011360048807936_n (1).jpg" alt="">
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section    cart    end -->
+
+@section    Javascript{
+
+
+
+    <script src="~/Scripts/main.js"></script>
+}

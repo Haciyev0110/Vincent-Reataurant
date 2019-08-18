@@ -1,0 +1,167 @@
+@import "upar";
+
+.headercon{
+   
+    .first{
+        background-color: #121618;
+            height: 230px;
+            .sidebar1{
+                margin-top: 2%;
+                display: flex;
+                padding-left: 7%;
+                width: 300px;
+            
+                .contact{
+                 margin-left: 8%;
+                    .contact1{
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: whitesmoke;
+                    letter-spacing: 2px;
+                    }
+                    .contact2{
+                    font-size: 14px;
+                    color: white;
+                    margin-top: 7px;
+                    opacity: 0.4;
+                    letter-spacing: 2px;
+                    }
+               }  
+                .icon{
+                i{
+                    font-size: 45px;
+                    color: whitesmoke;
+                } 
+              
+            }
+           
+           
+        }
+         
+        .sidebar2{
+            text-align: center;
+            padding-top: 2%;
+            padding-bottom: 30px;
+        
+            .vincentImg{
+                background: url(http://d3jdqrr9zagk0s.cloudfront.net/demo/wordpress-themes/vincent/wp-content/themes/vincent/img/logo.png) 0 0 no-repeat transparent;
+                width: 176px;
+                height: 99px;
+                display: inline-block;
+                background-size: 176px 99px;
+                text-decoration: none;
+                outline: none;
+            }
+        }
+        .hright{
+            text-align: right;
+            width: 300px;
+            display: flex;
+            padding-top: 3%;
+            padding-left: 7%;
+            .omcart{
+                display: inline-block;
+                padding-right: 10%;
+                .omount{
+                    span{
+                        color: whitesmoke;
+                        font-size: 14px;
+                        font-weight: 700;
+                        letter-spacing: 3px;
+                        text-align: right;
+                    }
+                }
+                .itemcart{
+                    color: whitesmoke;
+                        font-size: 14px;
+                        letter-spacing: 3px;
+                        opacity: 0.4;
+                    
+                }
+            }
+           
+            .shoppingicon{
+                display: flex;
+                position: relative;
+                i{
+                    font-size: 27px;
+                    color: whitesmoke;
+                    font-weight: 700;
+                    padding-top: 30%;
+                               }
+
+                .num{
+                    width: 17px;
+                    height: 18px;
+                    border-radius: 100%;
+                    background-color: #ffc851;
+                    font-size: 13px;
+                    text-align: center;
+                    color: #333;
+                    position: absolute;
+                    right:-37%;
+                    top: 0%;                    
+                    }
+            }
+        }
+       
+    }    
+        
+    #navbar{
+        margin-top: -1.5%;
+        .main_nav{
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            width: 43%;
+            list-style: none;
+            .main_nav_li{
+                position: relative;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 300;
+                    font-size: 14px;
+                    &:hover{
+                        color: #ffc851;
+                    }
+                }
+                &:hover .dropdown_menu{
+                    visibility: visible;
+                }
+                .dropdown_menu{
+                    transition: all 0.1s    linear;
+                    visibility: hidden;
+                    list-style: none;
+                    position: absolute;
+                    top: 150%;
+                    left: 50%;
+                    z-index: 99;
+                    transform: translateX(-50%);
+                    width: 200px;
+                    padding: 20px   30px;
+                    background-color: #1d2325;
+                    &::before{
+                        content: "";
+                        width: 15px;
+                        height: 10px;
+                        background-color: #1d2325;
+                        position: absolute;
+                        bottom: 99%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        clip-path: polygon(50% 45%, 0% 100%, 100% 100%);
+                    }
+                    .dropdown_menu_li:not(:last-child){
+                        margin-bottom: 10px;
+                        padding-bottom: 5px;
+                        border-bottom: 1px  solid   rgb(41, 41, 41);
+                    }
+                    
+                }
+            }
+        }
+    }
+   
+    
+}

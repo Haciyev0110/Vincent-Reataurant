@@ -1,0 +1,78 @@
+﻿@using VincentRestorant.Models;
+
+
+@model List<VincentRestorant.Models.Sliderfirst>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<a style="margin:30px 0;" href="/Admin/Mainslider/Create" class="btn btn-success btn-block ">
+    Add  New Slider Img
+</a>
+<table style="margin-bottom: 50px" ; class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Img
+
+            </th>
+            <th>
+                Img2
+            </th>
+            <th>
+                Titlecontent
+            </th>
+
+            <th>
+                Informationcontent
+            </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <img width="400" src="~/assets/images/slider/@item.Img" class="img-thumbnail" />
+            </td>
+            @if (string.IsNullOrEmpty(item.Img2))
+            {
+                <td>
+
+                </td>
+            }
+
+            else
+            {
+                <td>
+
+                    <img width="200" src="~/assets/images/Pizzas/@item.Img2" class="img-thumbnail" />
+                </td>
+            }
+
+
+            <td>
+                @item.Titlecontent
+            </td>
+            <td>
+                @item.Informatincontent
+            </td>
+
+            <td width="200">
+                <a href="/Admin/Mainslider/Edit/@item.ID" class="btn btn-warning"><i class="fas fa-pen"></i></a>
+                <a href="/Admin/Mainslider/Detales/@item.ID" class="btn btn-success"><i class="far fa-eye"></i></a>
+                <a href="/Admin/Mainslider/Delete/@item.ID" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+            </td>
+
+
+
+        </tr>
+        }
+    </tbody>
+</table>

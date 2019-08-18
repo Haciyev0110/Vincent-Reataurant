@@ -1,0 +1,43 @@
+﻿@model IEnumerable<VincentRestorant.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Username</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        if (item.Status == false)
+        {
+    <tr>
+        <td>@item.Date</td>
+        <td>@item.Status</td>
+        <td>@item.User.Username</td>
+        <td>
+            @Html.ActionLink("Order Detal", "Details", new { id = item.ID })
+
+        </td>
+    </tr>
+           
+
+        }
+
+    }
+
+</table>
+
+
+
+

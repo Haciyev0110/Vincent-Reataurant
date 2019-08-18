@@ -1,0 +1,282 @@
+﻿@model  VincentRestorant.Models.User
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!-- Discover   Our MEnu    start -->
+<section id="discmenu">
+    <div class="container menublock">
+        <div class="row text">
+            <div class="col-md-12 h3text">
+                <h3>MY ACCOUNT</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Discover   Our MEnu    end -->
+<!-- section    cart    start -->
+<section id="cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        @if (Session["userLogged"] == null)
+                        {
+                            <div class="login">
+
+                                <form action="/AccountUser/Login" method="post">
+                                    <div class="dropdown-menu">
+
+                                        <div class="form-group" style="padding-left:2.5%">
+                                            <label for="exampleDropdownFormEmail1">Email address *</label>
+                                            <input type="text" name="Username" class="form-control" id="username" placeholder="Username" required="required">
+
+                                        </div>
+                                        <div class="form-group" style="padding-left:2.5%">
+                                            <label for="exampleDropdownFormPassword1">Password  *</label>
+                                            <input type="password" name="Password" class="form-control" id="password" placeholder="Password" required="required">
+
+
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary" value="Login" style="margin-left:2.5%">Sign in</button>
+
+
+                                        <div class="dropdown-divider" style="border: none"></div>
+                                        <a class="dropdown-item" href="@Url.Action("Register","AccountUser")">New around here? Sign up</a>
+                                    </div>
+                                    @Html.ValidationMessage("Loginerror", new { @class = "text-danger" })
+                                </form>
+                            </div>
+
+                        }
+                        else{ 
+                               <div class="txtuser">
+
+                               </div>
+                         }
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 part2">
+                <div class="row serch">
+                    <div class="col-md-12">
+                        <div class="firstinput">
+                            <div class="input-group stylish-input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="input-group-addon">
+                                    <button type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="FEATURED">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post">
+                                <div class="row">
+                                    <div class="col-md-12  ">
+                                        <div class="text">
+                                            <h5>FEATURED POSTS</h5>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4   col-6">
+                                        <div class="picturepart">
+                                            <img src="~/assets/images/img/1-80x80.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8    col-6">
+                                        <div class="contentpart">
+                                            <a href="">HEALSY FOOD FOR HEALTHY BODY</a>
+                                            <span>April 6, 2017</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4    col-6">
+                                        <div class="picturepart">
+                                            <img src="~/assets/images/img/2-80x80.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8    col-6">
+                                        <div class="contentpart">
+                                            <a href="">FOOD DESIGN TRENDS 2016</a>
+                                            <span>April 6, 2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="Blog">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="categories">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text">
+                                            <h5>
+                                                BLOG CATEGORIES
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mini">
+                                            <ul>
+                                                <li>
+                                                    <a href="">Food</a>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </li>
+                                                <li>
+                                                    <a href="">Inspiration</a>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </li>
+                                                <li>
+                                                    <a href="">Lifestyle</a>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </li>
+                                                <li>
+                                                    <a href="">People</a>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </li>
+                                                <li>
+                                                    <a href="">Recipes</a>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </li>
+                                                <li>
+                                                    <a href="">World</a>
+                                                    <i class="fas fa-angle-right"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tags">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="lists">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text">
+                                            <h5>TAGS</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mini">
+                                            <a href="">BLOG</a>
+                                            <a href="">FOOD</a>
+                                            <a href="">LIFESTYLE</a>
+                                            <a href="">MARGHERITA</a>
+                                            <a href="">PIZZA</a>
+                                            <a href="">PIZZERIA</a>
+                                            <a href="">RESTAURANT</a>
+                                            <a href="">VINCENT</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row INSTAFEED">
+                    <div class="col-md-12">
+                        <div class="menuimg">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text">
+                                        <h5>INSTAFEED</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="picturepart">
+                                        <ul>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/burger/17817627_1991094447779194_2141034917813813248_n.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17596453_1394335877325424_5306473291534303232_n.jpg" alt="">
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17662462_240934883045697_4488760463823208448_n.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17663134_213463345806971_2661189821392748544_n.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17663740_2273891269502238_7837518096255418368_n.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <img src="~/assets/images/img/17818827_1383669068365197_1027011360048807936_n (1).jpg" alt="">
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section    cart    end -->
+@*<div class="contact-form ">
+
+
+        <div id="form-messages"></div>
+
+        <form action="/AccountUser/Login" method="post">
+            <div class="row">
+
+                <div class="col-sm-10" style="text-align:center;">
+                    <div class="form-group in_subject ficon">
+                        <span><i class="fas fa-user"></i></span>
+                        <input type="text" name="Username" class="form-control" id="username" placeholder="Username" required="required">
+                    </div>
+                    <div class="form-group in_subject ficon">
+                        <span><i class="fas fa-key"></i></span>
+                        <input type="password" name="Password" class="form-control" id="password" placeholder="Password" required="required">
+                    </div>
+                    <input type="submit" value="Login" />
+
+                </div>
+
+            </div>
+    </form>*@

@@ -1,0 +1,170 @@
+#ourMenu{
+    width: 100%;
+    height: auto;
+   background-color: #121618;
+   .discover{
+       padding-bottom: 5%;
+      
+    .menutext{
+        padding-top: 8%;
+        
+        .h2text{
+            text-align: center;
+            h2{
+                color: white;
+                font-weight: 400;
+                letter-spacing: 5px;
+                font-size: 32px;
+                line-height: 32px;
+                text-align: center;
+            }
+ 
+        }
+    }
+     .menukind{
+         text-align: center;
+         ul{
+             list-style: none;
+             padding-top: 3%;
+             .active{
+                 
+                     color: #ffc851;
+                 
+             }
+             li{
+                 display: inline-block;
+                 vertical-align: top;
+                 cursor: pointer;
+                 font-size: 18px;
+                 line-height: 26px;
+                 letter-spacing: 4px;
+                 font-weight: 700;
+                 text-transform: uppercase;
+                 margin-right: 43px;
+                 -webkit-transition: all .3s;
+                 transition: all .3s;
+                 color: white;
+                
+                
+             }
+         }
+     } 
+     .dataId1{
+         width: 100%;
+         height: auto;
+         display: block;
+         .ourmenupizza{
+             padding-top: 3%;
+             .MARGHERITA{
+               
+                 &:hover{
+                     .mini1{
+                         h4{
+                             color: #ffc851;
+                         }
+                     }
+                 }
+               text-align: center;
+                 .mini1{
+                     text-align: center;
+                     text-decoration: none;
+                     .picturepart{
+                     width: 70%;
+                     margin: 0 auto;
+                         position: relative;
+                         &:hover{
+                             span{
+                                 opacity: 1;
+                             }
+                         }
+                         img{
+                             width: 100%;
+                             height: auto;
+                         }
+                         span{
+                         position: absolute;
+                         width: 100%;
+                         height: 100%;
+                         display: inline-block;
+                         background-color: #ffc851a9;
+                         left: 0;
+                         top: 0;
+                         border-radius: 50%;
+                         padding-top: 47%;
+                         opacity: 0;
+                         transition: 0.4s;
+                         cursor: pointer;
+                         .spanimage{
+                             width: 21%;
+                             transform: translateX(-50%);
+                             transform: translateY(-50%);
+ 
+                         }
+                         }
+                     }
+                    .contentpart{
+                        a{
+                            text-decoration: none;
+                            h4{
+                                font-size: 18px;
+                                font-weight: 700;
+                                color: white;
+                                transition-duration: 0.7s;
+                                padding-top: 11%;
+                                letter-spacing: 1px;
+                               }
+                        }
+
+                       
+                        p{
+                            color: white;
+                            font-size: 14px;
+                            line-height: 28px;
+                            font-weight: 300;
+                            letter-spacing: 1px;
+                           }
+                        span{
+                            color: white;
+                            font-size: 24px;    
+                            letter-spacing: 2px;
+                           }
+                    }
+                    .add{
+                         background-color: #ffc851;
+                        
+                         width: 40%;
+                         height: 40%;
+                         border-radius: 50%;
+                         opacity: 7;
+                         position: absolute;
+                         top: 0;
+                         left: 0;
+                    }
+                    
+                   
+                    
+                    }
+                
+                
+             }
+           
+             
+         }
+        
+        
+   }
+   
+
+  .preloaderback{
+      width: 100%;
+      height: auto;
+      text-align: center;
+      display: none;
+      img{
+          width: 6%;
+          padding-top: 14%;
+          padding-bottom: 10%;
+      }
+  }
+    }  
+}

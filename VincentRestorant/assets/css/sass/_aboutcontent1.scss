@@ -1,0 +1,128 @@
+#contentpart{
+    width: 100%;
+    height: auto;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-color: #121618;
+    .title1{
+        h2{
+            color: #ffffff;
+            text-align: center;
+            letter-spacing: 6px;
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+    .title2{
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-top: 3%;
+        h6{
+            font-size: 15px;
+            color: #dce4e8;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: center;
+            letter-spacing: 3px;
+
+        }
+    }
+    .imgborder{
+        text-align: center;
+        padding-top: 2%;
+    }
+    .title3{
+        text-align: center;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 2%;
+        p{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+            color: #dce4e8;
+            line-height: 28px;
+            letter-spacing: 1px;
+        }
+    }
+    .picturepart{
+        width: 70%;
+        float: right;
+        padding-top: 5%;
+        img{
+            width: 100%;
+        }
+    }
+    .picturepart2{
+        float: left;
+    }
+    .contactext{
+        .bigtext{
+                 text-align: center;
+                padding-left: 30%;
+                padding-top: 7%;
+            h4{
+                text-align: center;
+                line-height: 26px;
+                letter-spacing: 5px;
+                color: #dce4e8;
+                font-weight: 400;
+            }
+        }
+        .bigtext2{
+            padding-left: 0;
+            padding-right: 23%;
+        }
+        .smalltext{
+                padding-left: 37%;
+                padding-top: 5%;
+                padding-right: 10%;
+            p{
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: 1px;
+                color: #dce4e8;
+                text-align: center;
+                font-weight: 300;
+            }
+        }
+        .smalltext2{
+            padding-left: 7%;
+            padding-right: 27%;
+        }
+        .directions{
+               
+                width: 25%;
+                height: 40px;
+                padding-left: 0%;
+                position: relative;
+                left: 52.5%;
+                padding-top: 0.5%;
+                top: 60%;
+               
+            a{
+                text-decoration: none;
+                color: #dce4e8;
+                font-size: 14px;
+                font-weight: 300;
+                border: 2px solid;
+                border-color: #dce4e8;
+                text-align: center;
+                letter-spacing: 2px;
+                padding: 6%;
+                transition: 0.4s;
+                i{
+                    padding-left: 3%;
+                }
+                &:hover{
+                    color: #ffc851;
+                    border-color: #ffc851;
+                }
+            }
+
+        }
+        .directions2{
+            left: 26%;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+﻿@model  VincentRestorant.Models.Sliderfirst
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h1 class="alert alert-danger">Bunu silmek istediyinizden eminsizinmi</h1>
+<div class="container">
+    <div class="row ">
+        <div class="col-md-12">
+            <img width="200" class="img-thumbnail" src="~/assets/images/slider/@Model.Img" />
+        </div>
+        <div class="col-md-12">
+            <img width="200" class="img-thumbnail" src="~/assets/images/Pizzas/@Model.Img2" />
+        </div>
+        <div class="col-md-6">
+            <h3>
+                @Model.Titlecontent
+            </h3>
+        </div>
+        <div class="col-md-6">
+            <h3>
+                @Model.Informatincontent
+            </h3>
+        </div>
+       
+        <form method="post">
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.ID)
+            <input type="submit" class="btn btn-danger btn-lg" value="Delete" />
+        </form>
+        @Html.ActionLink("Go back to list", "Index", null, new { @class = "btn btn-primary " })
+    </div>
+</div>
+

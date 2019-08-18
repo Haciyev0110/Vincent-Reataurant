@@ -1,0 +1,376 @@
+#mainslider{
+   
+    .container-fluid{
+        width: 100%;
+        height:900px;
+        .firstsliders{
+            padding-left: 0;
+            padding-right: 0;
+        }
+       .carousel-item{
+           width: 100%;
+           height: 900px !important;
+
+          img{
+              width: 100%;
+              height: 100%  !important;
+          }
+          .pizza{
+            width: 500px    !important;
+            height: 500px   !important;
+            z-index: 25;
+            position: absolute;
+            top: -30%;
+            left: 33%;
+           
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            animation-name: pizz;
+           
+            animation-fill-mode: forwards;
+            
+            animation-duration: 1s;
+            @keyframes pizz {
+                from{top: -30%}
+                to{top: 36%;}  
+            }
+         }
+          .h1{
+              color: white;
+              font-size: 2.3em;
+              z-index: 30;
+              position: absolute;
+              bottom: 24%;
+              left: 30%;
+              font-weight: 400;
+              letter-spacing: 4px;
+              transform: translateX(-50%);
+              transform: translateY(-50%);
+              opacity: 0;
+              animation-name: h1text;
+              animation-delay: 0.3s;
+              animation-fill-mode: forwards;
+              animation-duration: 0.7s;
+              @keyframes h1text {
+                  from{opacity: 0;left: 30%;transform:skew(70deg,0deg)}
+                  to{
+                      opacity: 1;   left: 43%;transform: skew(0deg,0deg)
+                  }
+              }
+
+          }
+         .p1{
+            color: white;
+            font-size: 16px;
+            z-index: 30;
+            position: absolute;
+            bottom: 13%;
+            left: 36%;
+            opacity: 0;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            letter-spacing: 4px;
+            text-align: center;
+            animation-name: ptext;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+            animation-duration: 0.7s;
+            @keyframes ptext {
+                from{opacity: 0;left: 50%;transform:skew(-50deg,0deg)}
+                to{
+                    opacity: 1;   left: 36%;transform: skew(0deg,0deg)
+                }
+            }
+         }
+        
+        
+       }
+    .slidenum2{
+             .pizza2{
+            width: 500px    !important;
+            height: 500px   !important;
+            z-index: 25;
+            position: absolute;
+            top: 45%;
+            right: -35%;
+           
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            animation-name: pizz2;
+        
+            animation-fill-mode: forwards;
+            
+            animation-duration: 0.7s;
+            @keyframes pizz2 {
+                from{right: -30%;}
+                to{right: 13%;}  
+            }
+                }
+             .h2{
+                    font-size: 50px;
+                    line-height: 50px;
+                    font-weight: 400;
+                    color: white;
+                    position: absolute;
+                    left: 13%;
+                    top: -39%;
+                    transform: translateX(-50%);
+                    transform: translateY(-50%);
+                    letter-spacing: 12px;
+                    animation-name: pizzh2;
+                    animation-delay: 0.1s;
+                    animation-fill-mode: forwards;
+                    
+                    animation-duration: 0.7s;
+                    @keyframes pizzh2 {
+                        from{top: -30%;}
+                        to{top: 39%;}  
+                    }
+                }
+                h4{
+                    font-size: 25px;
+                    line-height: 50px;
+                    font-weight: 400;
+                    color: white;
+                    position: absolute;
+                    left: -13%;
+                    top: 43%;
+                    transform: translateX(-50%);
+                    transform: translateY(-50%);
+                    letter-spacing: 3px;
+                    animation-name: pizzh4;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0.2s;
+                    animation-duration: 0.7s;
+                    @keyframes pizzh4 {
+                        from{left:-13% ;transform:skew(50deg,0deg)}
+                        to{left: 13%;transform:skew(0deg,0deg)}  
+                    }
+                }
+                .hr{
+                    width: 35%;
+                    height: 0.2%;
+                  background-color: white;
+                    position: absolute;
+                    left: -13%;
+                    top:50%; 
+                    transform: translateX(-50%);
+                    transform: translateY(-50%);
+                    animation-name: pizzhr;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0.2s;
+                    animation-duration: 0.7s;
+                    @keyframes pizzhr {
+                        from{left:-13% ;transform:skew(50deg,0deg)}
+                        to{left: 13%;transform:skew(0deg,0deg)}  
+                    }
+                }
+                .p2{
+                    position: absolute;
+                    font-size: 16px;
+                    color: white;
+                    left: 13%;
+                    opacity: 0;
+                    letter-spacing: 3px;
+                    
+                    font-weight: 300;
+                    animation-name: pizzp2;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0.4s;
+                    animation-duration: 0.7s;
+                    @keyframes pizzp2 {
+                        from{top: 70%; ;opacity: 0;}
+                        to{top: 55%;opacity: 1;}  
+                    }
+                }
+                .but1{
+                    width: 10%;
+                    height: 5%;
+                    position: absolute;
+                    left: 13%;
+                    opacity: 0;
+                    top: 90%;
+                    text-align: center;
+                    color: white;
+                    border: 1px solid;
+                    border-color: white;
+                    border-width: 100%;
+                    padding-top: 0.7%;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    font-weight: 400;
+                    outline: none;
+                    transition-duration: 0.5s; 
+                    animation-name: pizzbut1;
+                    animation-fill-mode: forwards;
+                    animation-duration: 0.7s;
+                    animation-delay: 0.5s;
+                    cursor: pointer;
+                    @keyframes pizzbut1 {
+                        from{top: 90%; opacity: 0;}
+                        to{top: 64%;opacity: 1;}  
+                    }
+                    &:hover{
+                        border-color:#ffc851;
+                        color: #ffc851;
+                    }
+                   
+                }
+                .view{
+                    width: 10%;
+                    height: 5%;
+                    position: absolute;
+                    left: 25%;
+                    top: 90%;
+                    opacity: 0;
+                    text-align: center;
+                    color: #333;
+                    border: 1px solid;
+                    border-color: rgb(255, 200, 81);
+                    background-color: rgb(255, 200, 81);
+                    border-width: 100%;
+                    padding-top: 0.7%;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    font-weight: 400;
+                    outline: none;
+                    transition-duration: 0.5s;
+                    transition-duration: 0.5s; 
+                    animation-name: pizzview;
+                    animation-fill-mode: forwards;
+                    animation-duration: 0.7s;
+                    animation-delay: 0.5s;
+                    cursor: pointer;
+                    @keyframes pizzview {
+                        from{top: 90%; opacity: 0;}
+                        to{top: 64%;opacity: 1;}  
+                    }
+                    &:hover{
+                        background-color: transparent;
+                        color: rgb(255, 200, 81);
+                    }
+                    i{
+                        
+                        font-size: 12px;
+                    }
+                }
+            
+         }
+    }
+    .slidenum3{
+        h3{
+            font-size: 25px;
+            line-height: 25px;
+            font-weight: 400;
+            color: white;
+            position: absolute;
+            left: 36%;
+            top: -30%;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            letter-spacing: 4px;
+            animation-name: slide3h4;
+            animation-fill-mode: forwards;
+            animation-delay: 0.7s;
+            animation-duration: 0.7s;
+            @keyframes slide3h4 {
+                // from{top:-36% ;}
+                // to{top: 36%;}  
+                0%  {top: -36%;}
+            
+               50%{top: 42%;}
+                
+                100% {top:36%;}
+
+            }
+        }
+        .h2second{
+            font-size: 50px;
+            line-height: 50px;
+            font-weight: 400;
+            color: white;
+            position: absolute;
+            left: 32.5%;
+            top: -43%;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            letter-spacing: 12px;
+            animation-name: slide3h2;
+            animation-delay: 0.1s;
+            animation-fill-mode: forwards;
+            
+            animation-duration: 0.7s;
+            @keyframes slide3h2 {
+                0%  {top: -43%;}
+            
+                50%{top: 48%;}
+                 
+                 100% {top:43%;}
+ 
+            }
+        }
+        .ptex3{
+            position: absolute;
+            font-size: 16px;
+            color: white;
+            top: 48%;
+            left: -33%;
+            letter-spacing: 3px;
+            font-weight: 300;
+            animation-name: slide3ptex;
+            animation-fill-mode: forwards;
+            animation-delay: 1.2s;
+            animation-duration: 0.9s;
+            @keyframes slide3ptex {
+                0%  {left: -33%;}
+            
+                50%{left: 37%;transform:skew(50deg,0deg);}
+                 
+                 100% {left:32.5%;transform:skew(00deg,0deg);}
+ 
+            }
+        }
+        .shopnow{
+            width: 10%;
+            height: 5%;
+            position: absolute;
+            left: 44%;
+            top: 90%;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            opacity: 0;
+            text-align: center;
+            color: #333;
+            border: 1px solid;
+            border-color: rgb(255, 200, 81);
+            background-color: rgb(255, 200, 81);
+            border-width: 100%;
+            padding-top: 0.7%;
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: 400;
+            outline: none;
+            transition-duration: 0.5s;
+            transition-duration: 0.5s; 
+            animation-name: pizzview;
+            animation-fill-mode: forwards;
+            animation-duration: 0.7s;
+            animation-delay: 1.5s;
+            cursor: pointer;
+            @keyframes pizzview {
+                from{top: 90%; opacity: 0;}
+                to{top: 64%;opacity: 1;}  
+            }
+            &:hover{
+                background-color: transparent;
+                color: rgb(255, 200, 81);
+            }
+            i{
+                
+                font-size: 12px;
+            }
+        }
+    }
+   
+    
+}

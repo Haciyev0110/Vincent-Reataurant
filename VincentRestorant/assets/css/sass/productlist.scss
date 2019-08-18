@@ -1,0 +1,123 @@
+@import "mobHeader";
+@import "headerCon";
+@import "footer";
+@import "backtop";
+@import "productlistss";
+
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+
+    #Shoplist{
+       
+        
+        .mini{
+            width: 100%;
+            margin-top: 25%;
+            .picturepart{
+                width: 52%;
+                position: absolute;
+                top: 0;
+                left: 24.5%;
+                transform: translateX(-50%);
+                transform: translateY(-50%);
+                img{
+                    width: 100%;
+    
+                }
+            }
+            .contentpart{
+                text-align: center;
+                padding-left: 6%;
+                padding-right: 6%;
+                width: 100%;
+    
+                h2{
+                    font-size: 18px;
+                    line-height: 26px;
+                    letter-spacing: 3px;
+                    font-weight: 700;
+                    padding: 0;
+                    margin-bottom: 13px;
+                    -webkit-transition: all .3s;
+                    transition: all .3s;
+                    a{
+                        text-decoration: none;
+                        color: #dce4e8;
+                        transition: 0.4s;
+                        &:hover{
+                            color: #ffc851;
+                        }
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    color: #dce4e8;
+                    line-height: 28px;
+                    font-weight: 300;
+                    text-align: center;
+                }
+                span{
+                    font-size: 24px;
+                    line-height: 26px;
+                    letter-spacing: 3px;
+                    color: #dce4e8;
+                }
+                .directions{
+                   
+                    width: 70%;
+                    height: 40px;
+                    position: relative;
+                    padding-top: 0.5%;
+                    top: 60%;
+                    left: 16%;
+                    padding-top: 15%;
+                    padding-bottom: 10%;
+                   
+                a{
+                    text-decoration: none;
+                    color: #dce4e8;
+                    font-size: 14px;
+                    font-weight: 300;
+                    border: 2px solid;
+                    border-color: #dce4e8;
+                    text-align: center;
+                    letter-spacing: 2px;
+                    padding: 6%;
+                    transition: 0.4s;
+                    i{
+                        padding-left: 3%;
+                    }
+                    &:hover{
+                        color: #ffc851;
+                        border-color: #ffc851;
+                    }
+                }
+    
+                 }
+               
+            }
+        }
+         
+        
+        .FEATURED{
+            .post{
+                .contentpart{
+                    padding-top: 23%;
+    
+                   
+                }
+            }
+        } 
+           .number{
+            width: 100%;
+         }
+         #a{
+            width: 25%;
+            margin-left: 37%;
+            margin-top: 4%;
+           
+        }
+       
+    }
+    
+}

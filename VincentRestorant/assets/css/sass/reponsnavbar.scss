@@ -1,0 +1,14 @@
+﻿@media only screen and (max-width: 767px) and (min-width: 320px) {
+    .responsiveNavbar {
+        display: block !important;
+        background-color: #212529 !important;
+    }
+
+    .responsiveNavbar button {
+        float: right;
+    }
+
+    .dropdown-menu show {
+        background-color: #212529 !important;
+    }
+}

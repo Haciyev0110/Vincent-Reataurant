@@ -1,0 +1,19 @@
+.backtop{
+    display: none;
+    width: 60px;
+    height: 60px;
+    background-color: #ffc851;
+    position: fixed;
+    text-align: center;
+    right: 1%;
+    bottom: 10%;
+    cursor: pointer;
+    i{
+        color: white;
+        padding-top: 100%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+        font-size: 18px;
+    }
+
+}

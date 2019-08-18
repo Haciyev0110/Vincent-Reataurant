@@ -1,0 +1,306 @@
+﻿
+@model VincentRestorant.ViewModel.SingleproducVM
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Discover   Our MEnu    start -->
+<section id="discmenu">
+    <div class="container menublock">
+        <div class="row text">
+            <div class="col-md-12 h3text">
+                <h3>PRODUCT DETAIL</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Discover   Our MEnu    end -->
+<!-- ProductDetals  section start -->
+<section id="Productdetal">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="picturepart">
+                            <img src="~/assets/Products/@Model.products.Img_producr" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4   col-4">
+                        <div class="minipicture">
+                            <img src="~/assets/images/Pizzas/19-1600x1600.jpg" alt="">
+                            <span> </span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4    col-4">
+                        <div class="minipicture">
+                            <img src="~/assets/images/Pizzas/20-1600x1600.jpg" alt="">
+                            <span> </span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4    col-4">
+                        <div class="minipicture">
+                            <img src="~/assets/images/Pizzas/23-150x150.jpg" alt="">
+                            <span> </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="titletext">
+                            <h1>
+                                @Model.products.Name
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pricetext">
+                            <span>$ @Model.products.ProductSizes.First().Price</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="ptext">
+                            <p>
+
+                                @Model.products.Big_text
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="options">
+                            <div class="row">
+                                <div class="col-md-5   col-4">
+                                    <div class="content">
+                                        <h5 style="color: white">Size</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-7    col-8">
+                                    <form action="">
+
+
+                                        <select class=" sizeselector    main">
+                                            @foreach (var item in Model.producsize)
+                                            {
+
+                                                if (Model.products.ID == item.Product_ID)
+                                                {
+                                                    <option  data-price="@item.Price" value="@item.Size.ID">@item.Size.Name</option>                                                   
+                                                }
+                                            }
+                                        </select>
+                                    </form>
+                                </div>
+                                @*<div class="col-md-5    col-4">
+                                        <div class="content">
+                                            <h5 style="color: white">Extra Cheese</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7    col-8">
+                                        <form action="">
+
+                                            <select>
+                                                <option value="volvo">Half</option>
+                                                <option value="saab">Saab</option>
+                                                <option value="opel">Opel</option>
+                                                <option value="audi">Audi</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-5    col-4">
+                                        <div class="content">
+                                            <h5 style="color: white">Onions</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7    col-8">
+                                        <form action="">
+
+                                            <select>
+                                                <option value="volvo">Whole</option>
+                                                <option value="saab">Saab</option>
+                                                <option value="opel">Opel</option>
+                                                <option value="audi">Audi</option>
+                                            </select>
+                                        </form>
+                                    </div>*@
+                                @*<div class="col-md-12">
+                                    <a href="">
+                                        Clear
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                </div>*@
+                                <div class="col-md-12">
+                                    <div class="add">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <span class="priceabout">
+                                                    $
+                                                     @Model.products.ProductSizes.First().Price
+                                                     
+                                                </span>
+
+                                            </div>
+                                           
+
+                                               
+                                                    <button data-proid="@Model.products.ID" class="butcount  productBasket" type="submit">
+                                                        Add To Cart
+                                                        <i class="fas fa-angle-right"></i>
+                                                    </button>
+                                               
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="listdetal">
+                                        <span>SKU: A935-C</span>
+                                        <span>Category: @Model.products.Category.Name</span>
+                                        <span>Tag: @Model.products.Category.Name</span>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="notes">
+                    <h2>
+                        RELATED PRODUCTS
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.prod)
+            {
+
+
+                <div class="col-md-4" style="padding-bottom: 20%">
+                    <div class="mini">
+                        <div class="picturepart">
+                            <img src="~/assets/Products/@item.Img_producr" alt="">
+                        </div>
+                        <div class="contentpart">
+                            <h2>
+                                <a href="@Url.Action("Index","Singproduct",new { id=item.ID})">@item.Name</a>
+                            </h2>
+                            <p>@item.Mini_text</p>
+                            <span>
+                                <span>$ </span>@item.ProductSizes.First().Price
+                            </span>
+                            <div class="directions">
+                                <a style="cursor:pointer" class="productBasket"  data-proId="@item.ID">
+                                    Add to cart
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            }
+
+            @*<div class="col-md-4" style="padding-bottom: 20%">
+                    <div class="mini">
+                        <div class="picturepart">
+                            <img src="assets/images/Pizzas/10-600x600.png" alt="">
+                        </div>
+                        <div class="contentpart">
+                            <h2>
+                                <a href="">Vincent</a>
+                            </h2>
+                            <p>Classic marinara sauce, authentic old-world pepperoni, all-natural Ita</p>
+                            <span>
+                                <span>$ </span>2.60
+                            </span>
+                            <div class="directions">
+                                <a href="">
+                                    Add to cart
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-bottom: 20%">
+                    <div class="mini">
+                        <div class="picturepart">
+                            <img src="assets/images/Pizzas/2-600x600.png" alt="">
+                        </div>
+                        <div class="contentpart">
+                            <h2>
+                                <a href="">Pepperoni</a>
+                            </h2>
+                            <p>Classic marinara sauce, authentic old-world pepperoni, all-natural Ita</p>
+                            <span>
+                                <span>$ </span>2.60
+                            </span>
+                            <div class="directions">
+                                <a href="">
+                                    Add to cart
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+        </div>
+    </div>
+</section>
+
+<!-- ProductDetals  section end -->
+@section    Javascript{
+    <script>
+        //$(".priceabout").html("$" + $(this).first("Value").attr("data-price"));
+
+        let button1 = document.querySelector(".butcount");
+        let input1 = document.querySelector(".inpcount");
+        let texterror = document.querySelector(".text1");
+
+        button1.addEventListener("click", function (e) {
+            if (input1.value != 0) {
+                texterror.style.display = "none";
+            }
+            else {
+                texterror.style.display = "inline-block";
+            }
+
+
+        })
+      
+        $(".main").change(function (e) {
+            $(".priceabout").html ( "$"+ $(this).find(":selected").attr( "data-price"));
+        })
+    </script>
+    <script src="~/Scripts/main.js"></script>
+    
+    }

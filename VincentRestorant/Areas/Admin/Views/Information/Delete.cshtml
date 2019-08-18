@@ -1,0 +1,49 @@
+﻿@model VincentRestorant.Models.Information
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Information</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <div class="col-md-12">
+            <img width="200" class="img-thumbnail" src="~/assets/images/icons/@Model.Icon_img" />
+        </div>
+
+        <dd>
+            @Html.DisplayFor(model => model.Icon_img)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titlecontent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titlecontent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Informationcontent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Informationcontent)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("Delete", "Information", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

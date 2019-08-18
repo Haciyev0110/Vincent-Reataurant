@@ -1,0 +1,406 @@
+#chose{
+    
+    width: 100%;
+    height: auto;
+    background-color:#121618;
+    .owsoume1{
+        padding-bottom: 4%;
+        .mini{
+            padding-bottom: 8%;
+            padding-top: 10%;
+            .margharita{
+                
+                .picturepart{
+                    display: inline-block;
+                        width: 100%;
+                        position: relative;
+                        &:hover{
+                            span{
+                                opacity: 1;
+                            }
+                        }
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                        span{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: inline-block;
+                        background-color: #ffc851a9;
+                        left: 0;
+                        top: 0;
+                        border-radius: 50%;
+                        padding-top: 50%;
+                        opacity: 0;
+                        transition: 0.4s;
+                        text-align: center;
+                        cursor: pointer;
+                        .spanimage{
+                            width: 14%;
+                            transform: translateX(-50%);
+                            transform: translateY(-50%);
+
+                        }
+                        }
+                    }
+
+                .contentpart{
+                    display: inline-block;
+                    color: #dce4e8;
+                    width: 100%;
+                    padding-top: 9%;
+                    height: auto;
+                   
+                    a{
+                        text-decoration: none;
+                        color: #dce4e8;
+                        transition: 0.5s;
+                        h4{
+                            font-size: 18px;
+                            font-weight: 600;
+                            padding-bottom: 6%;
+                            letter-spacing: 4px;
+                        }
+                        &:hover{
+                            color: #ffc851;
+                        }
+                    }
+                    
+                    h6{
+                        font-size: 14px;
+                        font-style: italic;
+                        letter-spacing: 1px;
+                        line-height: 28px;
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 28px;
+                    }
+                    span{
+                        font-size: 18px;
+                        line-height: 26px;
+                        font-weight: 700;
+                        color: #ffc851;
+                        letter-spacing: 3px;
+                    }
+                }    
+            }
+            
+        }
+        .mini2{
+            padding-bottom: 7%;
+            padding-top: 4%;
+            .straightline{
+                
+                .hr{
+                    width: 100%;
+                    height: 1px;
+                    background-color: #dce4e8;
+                    opacity: 0.2;
+                }
+            }
+        }
+        .mini3{
+            padding-bottom: 2%;
+            
+                .peperonicontent1{
+                    a{
+                        text-decoration: none;
+                        color: #dce4e8;
+                        font-size: 16px;
+                        transition: 0.4s;
+                        .borderrr{
+                            width: 50%;
+                            height: 2px;
+                            border-bottom: dotted 2px #dce4e8;
+                            display: inline-block;
+                            opacity: 0.3;
+                        }
+                        span{
+                           
+                            color: #dce4e8;
+                        }
+                        &:hover{
+                            color: #ffc851;
+                            span{
+                                color: #dce4e8;
+                            }
+                        }
+                    }
+                }
+                .peperonicontent2{
+                    padding-top: 4%;
+                    padding-bottom: 4%;
+                    color: #dce4e8;
+                    font-size: 14px;
+                    opacity: 0.9;
+
+                }
+        }    
+            // .about2{
+            //     .diabloconten1{
+            //         a{
+            //             text-decoration: none;
+            //             color: #dce4e8;
+            //             font-size: 16px;
+            //             transition: 0.4s;
+            //             .borderrr{
+            //                 width: 65%;
+            //                 height: 2px;
+            //                 border-bottom: dotted 2px #dce4e8;
+            //                 letter-spacing: 2px;
+            //                 display: inline-block;
+            //                 opacity: 0.3;
+            //             }
+            //             span{
+                           
+            //                 color: #dce4e8;
+            //             }
+            //             &:hover{
+            //                 color: #ffc851;
+            //                 span{
+            //                     color: #dce4e8;
+                                
+            //                 }
+            //             }
+            //         }
+            //     }
+            //     .diabloconten2{
+            //         padding-top: 9%;
+            //         padding-bottom: 4%;
+            //         color: #dce4e8;
+            //         font-size: 14px;
+            //         letter-spacing: 2px;
+            //         opacity: 0.9;
+
+            //     }
+            // }
+        
+        // .mini4{
+        //     padding-bottom: 2%;
+        //     .about1{
+        //         .CARBONARAcontent1{
+        //             a{
+        //                 text-decoration: none;
+        //                 color: #dce4e8;
+        //                 font-size: 16px;
+        //                 transition: 0.4s;
+        //                 .borderrr{
+        //                     width: 63%;
+        //                     height: 2px;
+        //                     border-bottom: dotted 2px #dce4e8;
+        //                     letter-spacing: 2px;
+        //                     display: inline-block;
+        //                     opacity: 0.3;
+        //                 }
+        //                 span{
+                           
+        //                     color: #dce4e8;
+        //                 }
+        //                 &:hover{
+        //                     color: #ffc851;
+        //                     span{
+        //                         color: #dce4e8;
+                                
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .CARBONARAcontent2{
+        //             padding-top: 4%;
+        //             padding-bottom: 4%;
+        //             color: #dce4e8;
+        //             font-size: 14px;
+        //             opacity: 0.9;
+
+        //         }
+        //     }
+        //     .about2{
+        //         .CAPRICCIOSAconten1{
+        //             a{
+        //                 text-decoration: none;
+        //                 color: #dce4e8;
+        //                 font-size: 16px;
+        //                 transition: 0.4s;
+        //                 .borderrr{
+        //                     width: 58%;
+        //                     height: 2px;
+        //                     border-bottom: dotted 2px #dce4e8;
+        //                     letter-spacing: 2px;
+        //                     display: inline-block;
+        //                     opacity: 0.3;
+        //                 }
+                        
+        //                 span{
+        //                     color: #dce4e8;
+        //                 }
+        //                 &:hover{
+        //                     color: #ffc851;
+        //                     span{
+        //                         color: #dce4e8;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .CAPRICCIOSAconten2{
+        //             padding-top: 8%;
+        //             padding-bottom: 4%;
+        //             color: #dce4e8;
+        //             font-size: 14px;
+        //             opacity: 0.9;
+
+        //         }
+        //     }
+        // }
+        // .mini5{
+        //     padding-bottom: 2%;
+        //     .about1{
+        //         .PROSCIUTTOcontent1{
+        //             a{
+        //                 text-decoration: none;
+        //                 color: #dce4e8;
+        //                 font-size: 16px;
+        //                 transition: 0.4s;
+        //                 .borderrr{
+        //                     width: 63%;
+        //                     height: 2px;
+        //                     border-bottom: dotted 2px #dce4e8;
+        //                     letter-spacing: 2px;
+        //                     display: inline-block;
+        //                     opacity: 0.3;
+        //                 }
+        //                 span{
+        //                     color: #dce4e8;
+        //                 }
+        //                 &:hover{
+        //                     color: #ffc851;
+        //                     span{
+        //                         color: #dce4e8;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .PROSCIUTTOcontent2{
+        //             padding-top: 4%;
+        //             padding-bottom: 4%;
+        //             color: #dce4e8;
+        //             font-size: 14px;
+        //             opacity: 0.9;
+
+        //         }
+        //     }
+        //     .about2{
+        //         .SAPORITAconten1{
+        //             a{
+        //                 text-decoration: none;
+        //                 color: #dce4e8;
+        //                 font-size: 16px;
+        //                 transition: 0.4s;
+        //                 .borderrr{
+        //                     width: 63%;
+        //                     height: 2px;
+        //                     border-bottom: dotted 2px #dce4e8;
+        //                     letter-spacing: 2px;
+        //                     display: inline-block;
+        //                     opacity: 0.3;
+        //                 }
+        //                 span{
+        //                     color: #dce4e8;
+        //                 }
+        //                 &:hover{
+        //                     color: #ffc851;
+        //                     span{
+        //                         color: #dce4e8;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .SAPORITAconten2{
+        //             padding-top: 5%;
+        //             padding-bottom: 4%;
+        //             color: #dce4e8;
+        //             font-size: 14px;
+        //             opacity: 0.9;
+
+        //         }
+        //     }
+        // }
+        // .mini6{
+        //     padding-bottom: 2%;
+        //     .about1{
+        //         .CALZONEcontent1{
+        //             a{
+        //                 text-decoration: none;
+        //                 color: #dce4e8;
+        //                 font-size: 16px;
+        //                 transition: 0.4s;
+        //                 .borderrr{
+        //                     width: 72%;
+        //                     height: 2px;
+        //                     border-bottom: dotted 2px #dce4e8;
+        //                     letter-spacing: 2px;
+        //                     display: inline-block;
+        //                     opacity: 0.3;
+        //                 }
+        //                 span{
+        //                     color: #dce4e8;
+        //                 }
+        //                 &:hover{
+        //                     color: #ffc851;
+        //                     span{
+        //                         color: #dce4e8;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .CALZONEcontent2{
+        //             padding-top: 4%;
+        //             padding-bottom: 4%;
+        //             color: #dce4e8;
+        //             font-size: 14px;
+        //             opacity: 0.9;
+
+        //         }
+        //     }
+        //     .about2{
+        //         .NEAPOLITANOconten1{
+        //             a{
+        //                 text-decoration: none;
+        //                 color: #dce4e8;
+        //                 font-size: 16px;
+        //                 transition: 0.4s;
+        //                 .borderrr{
+        //                     width: 57%;
+        //                     height: 2px;
+        //                     border-bottom: dotted 2px #dce4e8;
+        //                     letter-spacing: 2px;
+        //                     display: inline-block;
+        //                     opacity: 0.3;
+        //                 }
+        //                 span{
+        //                     color: #dce4e8;
+        //                 }
+        //                 &:hover{
+        //                     color: #ffc851;
+        //                     span{
+        //                         color: #dce4e8;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .NEAPOLITANOconten2{
+        //             padding-top: 4%;
+        //             padding-bottom: 4%;
+        //             color: #dce4e8;
+        //             font-size: 14px;
+        //             opacity: 0.9;
+
+        //         }
+        //     }
+        // }
+        
+            
+    }
+}

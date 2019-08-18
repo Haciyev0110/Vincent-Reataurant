@@ -1,0 +1,106 @@
+@import "mobHeader";
+@import "headerCon";
+@import "iforMation";
+@import "footer";
+@import "backtop";
+@import "disccover1";
+@import "chosee";
+@import "upar";
+@import "angle2";
+@import "angle3";
+@import "chosee2";
+@import "chosee3";
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+    .headercon{
+        .upar{
+            display: none;
+        }
+    }
+   
+    #discmenu{
+        .menublock{
+            .text{
+                .h3text{
+                    h3{
+                        font-size: 29px;
+                        
+                    }
+                }
+            }
+        }
+    }
+    #chose{
+        width: 100%;
+        height: auto;
+        background-color:#121618;
+        .owsoume1{
+            .mini{  
+                padding-top: 2%;
+                padding-bottom: 2%;
+                text-align: center;
+                .margharita{
+                    text-align: center;
+                    .picturepart{
+                            width: 88%;
+                            position: relative;
+                            padding-top: 3%;
+                            span{
+                                padding-bottom: 3%;
+                                padding-top: 3%;
+                            }
+                        }
+                }
+               
+            }
+            
+            .mini3{
+                padding-bottom: 2%;
+                
+                    .peperonicontent1{
+                        a{
+                            text-decoration: none;
+                            color: #dce4e8;
+                            font-size: 16px;
+                            transition: 0.4s;
+                            .borderrr{
+                                width: 20%;
+                                height: 2px;
+                                border-bottom: dotted 2px #dce4e8;
+                                display: inline-block;
+                                opacity: 0.3;
+                            }
+                            span{
+                               
+                                color: #dce4e8;
+                            }
+                            &:hover{
+                                color: #ffc851;
+                                span{
+                                    color: #dce4e8;
+                                }
+                            }
+                        }
+                    }
+                    .peperonicontent2{
+                        padding-top: 4%;
+                        padding-bottom: 4%;
+                        color: #dce4e8;
+                        font-size: 14px;
+                        opacity: 0.9;
+    
+                    }
+            } 
+            
+            
+                
+        }
+    }
+   
+}

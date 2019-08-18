@@ -1,0 +1,113 @@
+#accrodinfirst{
+    width: 100%;
+    height: auto;
+    background-color: #121618;
+    padding-bottom: 6%;
+    .mini1{ 
+        background-color: #121618;
+        .card{  
+            background-color: #121618;
+            border: none;
+            transition: 0.4s;
+            cursor: pointer;
+            .card-header{   
+                margin-bottom: 2%;
+                padding: 0;
+                border: 2px solid  #333;
+                transition: 0.4s;
+                button{
+                    color: #dce4e8;
+                    text-decoration: none;
+                    transition: 0.7s;
+    
+                }
+            }
+            .card-body{
+                color: white;
+            }
+            &:hover{
+                .card-header{
+                    border-color: #ffc851;
+                }
+                button{
+                    color: #ffc851;
+                }
+            }
+        }
+        .active{
+            .card-header{   
+                margin-bottom: 2%;
+                padding: 0;
+                border: 2px solid  #ffc851;
+                transition: 0.4s;
+                button{
+                    color: #dce4e8;
+                    text-decoration: none;
+                    transition: 0.7s;
+    
+                }
+            }
+            .card-body{
+                color: white;
+            }
+        }
+        
+    }
+    .mini2{
+        width: 100%;
+        height: auto;
+        background-image: url("../../images/img/back_4.jpg");
+        background-size: cover;
+        .content{
+            width: 100%;
+            height: auto;
+            text-align: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 14%;
+            padding-bottom: 22%;
+            h6{
+               padding-bottom: 3%;
+            }
+            h5{
+                font-weight: 700;
+                padding-bottom: 5%;
+            }
+            p{
+                padding-bottom: 3%;
+                font-size: 14px;
+            }
+            .directions{
+               
+                width: 60%;
+                height: 40px;
+                position: relative;
+                padding-top: 0.5%;
+                top: 60%;
+                left: 18%;
+                padding-top: 5%;
+               
+            a{
+                text-decoration: none;
+                color: #121618;
+                font-size: 14px;
+                font-weight: 300;
+                border: 2px solid;
+                border-color: #121618;
+                text-align: center;
+                letter-spacing: 2px;
+                padding: 6%;
+                transition: 0.4s;
+                i{
+                    padding-left: 3%;
+                }
+                &:hover{
+                    color: #dce4e8;
+                    background-color: #121618;
+                }
+            }
+
+             }
+        }
+    }
+}

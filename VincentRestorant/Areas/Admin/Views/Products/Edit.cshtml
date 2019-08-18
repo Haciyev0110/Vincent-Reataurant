@@ -1,0 +1,177 @@
+﻿@using VincentRestorant.Models;
+
+@model VincentRestorant.Models.Product
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<form action="/Products/Edit"enctype="multipart/form-data" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Product</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <input type="hidden" name="fileadi" value="@Model.Img_producr" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.Categories_ID, "Categories_ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Categories_ID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Categories_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Mini_text, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Mini_text, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Mini_text, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Big_text, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Big_text, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Big_text, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Inkrudent, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Inkrudent, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Inkrudent, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Img_producr, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="Img" class="form-control" />
+
+                @Html.ValidationMessageFor(model => model.Img_producr, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Status)
+                    @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="box_general padding_bottom col-md-4">
+
+            <div class="row">
+
+                <div id="product-wrapper-1" class="col-md-12">
+                    <div class="form-group row ">
+                        <p><b>Ölçülər :</b></p>
+                        @foreach (var item in ViewBag.productSize)
+                        {
+                            <input type="hidden" name="productSizeID" value="@item.ID" />
+                            <select class="form-control" name="SizeId" required>
+                                @foreach (var sizes in ViewBag.Sizes)
+                                {
+                                    if (item.Size_ID == sizes.ID)
+                                    {
+                                        <option selected value="@sizes.ID">@sizes.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@sizes.ID">@sizes.Name</option>
+                                    }
+                                }
+
+                            </select>
+                            <input class="form-control" required type="text" value="@item.Price" name="price">
+                        }
+
+
+
+                        <button style="border-radius: 100%; width: 40px; height: 40px; margin-top: 34px;" class="add_field-1 btn btn-primary"><i class="fa fa-plus"></i></button>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+
+                </div>
+
+                <button style="height: 40px;" type="submit" class="btn btn-primary ">Əlavə et</button>
+                <div class="clearfix"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+</form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section    Javascript{
+    <script>
+    var p = document.querySelector(".form-control");
+        var p_prime = p.cloneNode(true);
+        $(document).ready(function (e) {
+            var max_fields = 10;
+            var wrapper = $("#product-wrapper-1");
+            var add_button = $(".add_field-1");
+            var y = 1;
+
+
+            $(add_button).click(function (e) {
+
+                e.preventDefault();
+                if (y < max_fields) {
+                    y++;
+
+                    $(wrapper).append(`
+
+<div class="form-group row ">
+
+  <p><b>Ölçülər :</b></p>
+                        <select class="form-control"required    name="SizeId">
+     @foreach (var sizes in ViewBag.Sizes)
+                            {
+                                <option value="@sizes.ID">@sizes.Name</option>
+                            }
+
+
+                                                            </select>
+
+
+                                                            <input class="form-control" required type="text" name="Price[]">
+<div class="clearfix"></div>
+<a href="#" style="color: red;" class="remove_sponsor_field-1">Sil</a>
+</div>
+<div class="clearfix"></div>
+`);
+                }
+            });
+            $(wrapper).on("click", ".remove_sponsor_field-1", function (e) {
+                e.preventDefault(); $(this).parent('div').remove(); y--;
+            })
+        });
+    </script>
+}

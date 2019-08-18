@@ -1,0 +1,130 @@
+﻿@using VincentRestorant.Models;
+@model VincentRestorant.ViewModel.HomeIndexVM
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Discover   Our MEnu    start -->
+<section id="discmenu">
+    <div class="container menublock">
+        <div class="row text">
+            <div class="col-md-12 h3text">
+                <h3>DISCOVER OUR MENU</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Discover   Our MEnu    end -->
+<!-- Section    Our Menu    Start -->
+<section id="ourMenu">
+    <div class="container   discover">
+        <div class="row menutext">
+            <div class="col-md-12   h2text">
+                <h2>DISCOVER OUR MENU</h2>
+            </div>
+        </div>
+        <div class="row menukind">
+            <div class="col-md-12">
+
+                <ul class="menuList">
+                    <li class="active" data-id="1">Burgers</li>
+                    <li data-id="2"> DESSERTS</li>
+                    <li data-id="3"> DRINKS</li>
+                    <li data-id="4">PASTA</li>
+                    <li data-id="5">PIZZAS</li>
+                    <li data-id="6">SALADS</li>
+                </ul>
+                </ul>
+
+
+            </div>
+        </div>
+        @*<div class="container-fluid preloaderback">
+                <img src="~/assets/images/Background/preloader.gif" alt="">
+            </div>*@
+        @foreach (var item in Model.categories)
+        {
+            <div class="cotainer-fluid  dataId1  recipes" data-id="@item.ID">
+                <div class="row ourmenupizza">
+                    @foreach (var pro in Model.product)
+                    {
+                        if (pro.Categories_ID == item.ID)
+                        {
+                            <div class="col-md-3  MARGHERITA">
+
+                                <div class="mini1">
+
+
+                                    <div class="picturepart">
+                                        <img src="~/assets/Products/@pro.Img_producr" alt="">
+                                        <span class="productBasket" data-proId="@pro.ID">
+                                            <img class="spanimage" src="~/assets/images/icons/iconminicart.png" alt="">
+                                        </span>
+                                    </div>
+
+                                    <div class="contentpart">
+                                        <a href="@Url.Action("Index","Singproduct",new {id=pro.ID })">
+                                            <h4> @pro.Name</h4>
+                                        </a>
+
+                                        <p>
+                                            @pro.Mini_text
+                                        </p>
+                                        <span>$@pro.ProductSizes.First().Price</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        }
+
+
+
+                    }
+
+
+                </div>
+
+
+            </div>
+        }
+</section>
+<!-- Section    Our Menu    End -->
+<!-- The    Text    Information Start -->
+<section id="Information">
+    <div class="container">
+        <div class="row  foods">
+            @foreach (var item in Model.information)
+            {
+                <div class="col-md-4 ">
+                    <div class="qualityfood">
+                        <div class="mini1">
+                            <img src="~/assets/images/icons/@item.Icon_img" alt="">
+                            <h4>@item.Titlecontent</h4>
+                            <p>
+                                @item.Informationcontent
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            }
+
+
+        </div>
+
+    </div>
+</section>
+<!-- The    Text    Information End -->
+
+@section    Javascript{
+
+
+
+    <script src="~/Scripts/main.js"></script>
+}

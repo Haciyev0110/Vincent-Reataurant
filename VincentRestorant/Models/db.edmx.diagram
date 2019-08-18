@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f5f9cb6ce7d54a2dad2ae1448546edda" Name="Diagram1">
+        <EntityTypeShape EntityType="VincentRestourantModel.Admin" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Adres_First" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Category" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Information" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Order" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Ordersitem" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Partner" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.ProductSize" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Second_Slider" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Size" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Sliderfirst" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.Team" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VincentRestourantModel.User" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <AssociationConnector Association="VincentRestourantModel.FK__Products__Catego__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="VincentRestourantModel.FK__Orders__Users_ID__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="VincentRestourantModel.FK__Ordersite__Order__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="VincentRestourantModel.FK__Ordersite__Produ__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="VincentRestourantModel.FK__ProductSi__Produ__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="VincentRestourantModel.FK__ProductSi__Size___412EB0B6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

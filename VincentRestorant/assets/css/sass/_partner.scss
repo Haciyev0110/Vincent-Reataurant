@@ -1,0 +1,19 @@
+#Partner{
+    width: 100%;
+    height: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background-color: #121618;
+
+    .main{
+        width: 95%;
+        height: auto;
+        .picturepart{
+            width: 100%;
+            height: auto;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

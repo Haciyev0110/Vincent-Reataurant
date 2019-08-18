@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VincentRestourantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admins">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Adres_First">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Img" Type="nvarchar" MaxLength="255" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="250" />
+    <Property Name="Clas" Type="nvarchar" MaxLength="150" />
+    <Property Name="Clas2" Type="nvarchar" MaxLength="100" />
+    <Property Name="WorkingHouse" Type="nvarchar" MaxLength="100" />
+    <Property Name="WorkingTime" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="Information">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon_img" Type="nvarchar" MaxLength="255" />
+    <Property Name="Titlecontent" Type="nvarchar" MaxLength="50" />
+    <Property Name="Informationcontent" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Users_ID" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="Ordersitems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Orders_ID" Type="int" />
+    <Property Name="Productsize_Id" Type="int" />
+    <Property Name="Count" Type="int" />
+    <Property Name="Orderprice" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Partner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Img" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Categories_ID" Type="int" />
+    <Property Name="Mini_text" Type="nvarchar" MaxLength="300" />
+    <Property Name="Big_text" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Img_producr" Type="nvarchar" MaxLength="255" />
+    <Property Name="Inkrudent" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ProductSizes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product_ID" Type="int" />
+    <Property Name="Size_ID" Type="int" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Second_Slider">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Img" Type="nvarchar" MaxLength="255" />
+    <Property Name="Clas" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sizes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="Sliderfirst">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Img" Type="nvarchar" MaxLength="255" />
+    <Property Name="Titlecontent" Type="nvarchar" MaxLength="50" />
+    <Property Name="Informatincontent" Type="nvarchar" MaxLength="300" />
+    <Property Name="Img2" Type="nvarchar" MaxLength="255" />
+    <Property Name="Class" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Img" Type="nvarchar" MaxLength="255" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Profession" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="60" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__Orders__Users_ID__3C69FB99">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Users_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ordersite__Order__3D5E1FD2">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+    <End Role="Ordersitems" Type="Self.Ordersitems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Ordersitems">
+        <PropertyRef Name="Orders_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ordersite__Produ__3E52440B">
+    <End Role="ProductSizes" Type="Self.ProductSizes" Multiplicity="0..1" />
+    <End Role="Ordersitems" Type="Self.Ordersitems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSizes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Ordersitems">
+        <PropertyRef Name="Productsize_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Products__Catego__2B3F6F97">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="Categories_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductSi__Produ__300424B4">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="ProductSizes" Type="Self.ProductSizes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductSizes">
+        <PropertyRef Name="Product_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductSi__Size___412EB0B6">
+    <End Role="Sizes" Type="Self.Sizes" Multiplicity="0..1" />
+    <End Role="ProductSizes" Type="Self.ProductSizes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sizes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductSizes">
+        <PropertyRef Name="Size_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VincentRestourantModelStoreContainer">
+    <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Adres_First" EntityType="Self.Adres_First" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Information" EntityType="Self.Information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ordersitems" EntityType="Self.Ordersitems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Partner" EntityType="Self.Partner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductSizes" EntityType="Self.ProductSizes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Second_Slider" EntityType="Self.Second_Slider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sizes" EntityType="Self.Sizes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sliderfirst" EntityType="Self.Sliderfirst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Orders__Users_ID__3C69FB99" Association="Self.FK__Orders__Users_ID__3C69FB99">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ordersite__Order__3D5E1FD2" Association="Self.FK__Ordersite__Order__3D5E1FD2">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Ordersitems" EntitySet="Ordersitems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ordersite__Produ__3E52440B" Association="Self.FK__Ordersite__Produ__3E52440B">
+      <End Role="ProductSizes" EntitySet="ProductSizes" />
+      <End Role="Ordersitems" EntitySet="Ordersitems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Products__Catego__2B3F6F97" Association="Self.FK__Products__Catego__2B3F6F97">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductSi__Produ__300424B4" Association="Self.FK__ProductSi__Produ__300424B4">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductSizes" EntitySet="ProductSizes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductSi__Size___412EB0B6" Association="Self.FK__ProductSi__Size___412EB0B6">
+      <End Role="Sizes" EntitySet="Sizes" />
+      <End Role="ProductSizes" EntitySet="ProductSizes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

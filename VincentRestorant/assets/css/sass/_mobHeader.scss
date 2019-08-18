@@ -1,0 +1,151 @@
+.mobheader{
+    width: 100%;
+    height:80px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    position: fixed;
+    top: 0;
+    z-index: 900;
+    background-color: #121618;
+    display: none;
+    transition: 0.8s;
+    
+    .mobversion{
+        margin-right: 0 !important;
+    }
+    .conimage{
+                padding-left: 4%;
+            .miniimage{
+                width: 30%;
+                text-align: center;
+                padding-bottom: 1%;
+                padding-top: 7%;
+                padding-left: 5%;
+                .wrapper{
+                    text-decoration: none;
+                   
+                    img{
+                        width: 100%;
+                        transform: translateX(-50%);
+                        transform: translateY(-50%);
+                    }
+                }
+                
+            
+           
+        }
+    }
+    .mobhright{
+        .hright{
+            text-align: right;
+            width: 300px;
+            display: flex;
+            padding-top: 3%;
+            padding-left: 7%;
+            .omcart{
+                display: inline-block;
+                padding-right: 10%;
+                .omount{
+                    span{
+                        color: whitesmoke;
+                        font-size: 14px;
+                        font-weight: 700;
+                        letter-spacing: 3px;
+                        text-align: right;
+                    }
+                }
+                .itemcart{
+                    color: whitesmoke;
+                        font-size: 14px;
+                        letter-spacing: 3px;
+                        opacity: 0.4;
+                    
+                }
+            }
+           
+            .shoppingicon{
+                display: flex;
+                position: relative;
+                i{
+                    font-size: 27px;
+                    color: whitesmoke;
+                    font-weight: 700;
+                    padding-top: 30%;
+                               }
+    
+                .num{
+                    width: 17px;
+                    height: 18px;
+                    border-radius: 100%;
+                    background-color: #ffc851;
+                    font-size: 13px;
+                    text-align: center;
+                    color: #333;
+                    position: absolute;
+                    right:-37%;
+                    top: 0%;                    
+                    }
+            }
+        }
+    }
+    .mobnav{
+        #navbar{
+            padding-top: 3%;
+            .main_nav{
+                margin: auto;
+                justify-content: space-between;
+                width: 90%;
+                list-style: none;
+                .main_nav_li{
+                    position: relative;
+                    display: inline-block;
+                    padding-right: 2%;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        &:hover{
+                            color: #ffc851;
+                        }
+                    }
+                    &:hover .dropdown_menu{
+                        visibility: visible;
+                    }
+                    .dropdown_menu{
+                        transition: all 0.1s    linear;
+                        visibility: hidden;
+                        list-style: none;
+                        position: absolute;
+                        top: 150%;
+                        left: 50%;
+                        z-index: 99;
+                        transform: translateX(-50%);
+                        width: 200px;
+                        padding: 20px   30px;
+                        background-color: #1d2325;
+                        &::before{
+                            content: "";
+                            width: 15px;
+                            height: 10px;
+                            background-color: #1d2325;
+                            position: absolute;
+                            bottom: 99%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            clip-path: polygon(50% 45%, 0% 100%, 100% 100%);
+                        }
+                        .dropdown_menu_li:not(:last-child){
+                            margin-bottom: 10px;
+                            padding-bottom: 5px;
+                            border-bottom: 1px  solid   rgb(41, 41, 41);
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+   
+   
+}

@@ -1,0 +1,40 @@
+#Information{
+    width: 100%;
+    height: 400px;
+    background-image: url("../../images/Background/back_2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+   
+       
+        .foods{
+            .qualityfood{
+                padding-top: 3%;
+                text-align: center;
+                .mini1{
+                    img{
+                        margin-bottom: 8%;
+                        padding-top: 4%;
+                    }
+                    h4{
+                        padding-top: 6%;
+                        margin-bottom: 6%;
+                        letter-spacing: 1px;
+                        font-weight: 400;
+                        font-size: 25px;
+                        line-height: 22px;
+                      
+                    }
+                    p{
+                        font-size: 15px;
+                        text-align: center;
+                        font-weight:300;
+                        line-height: 28px;
+                    }
+                }
+               
+            }
+        }
+     
+    
+}

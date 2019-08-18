@@ -1,0 +1,93 @@
+@import "mobHeader";
+@import "headerCon";
+@import "footer";
+@import "backtop";
+@import "cartshoping";
+@import "carts";
+
+#cart{
+    .picturepart{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .picturepart2{
+        padding-top: 20%;
+    }
+    .contentpart{   
+        padding-left: 10%;
+        h5{
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 18px;
+            color: #dce4e8;
+            padding-bottom: 5%;
+        }
+        p{
+            font-size: 16px;
+            line-height: 38px;
+            color: #dce4e8;
+            font-weight: 300;
+
+
+        }
+        .mini2{
+            padding-top: 12%;
+
+        }
+    }
+    .contentpart2{
+        padding-top: 20%;
+    }
+    .quarters{
+        padding-top: 14%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+    #cart{
+        .picturepart{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .picturepart2{
+            padding-top: 20%;
+        }
+        .contentpart{   
+            padding-left: 3%;
+            padding-top: 20%;
+            h5{
+                font-weight: 700;
+                letter-spacing: 4px;
+                text-align: left;
+                font-size: 18px;
+                line-height: 18px;
+                color: #dce4e8;
+                padding-bottom: 5%;
+            }
+            p{
+                font-size: 16px;
+                line-height: 38px;
+                color: #dce4e8;
+                font-weight: 300;
+    
+    
+            }
+            .mini2{
+                padding-top: 12%;
+    
+            }
+        }
+        .contentpart2{
+            padding-top: 20%;
+        }
+        .quarters{
+            padding-top: 14%;
+        }
+    }
+}

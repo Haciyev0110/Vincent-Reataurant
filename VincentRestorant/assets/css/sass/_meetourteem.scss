@@ -1,0 +1,122 @@
+
+#meetour{
+    width: 100%;
+    height: auto;
+    background-color: #121618;
+    .maindiv{
+        width: 100%;
+        height: auto;
+        padding-top: 4%;
+        padding-bottom: 12%;
+        .htext{
+            h2{
+                text-align: center;
+                letter-spacing: 6px;
+                font-size: 32px;
+                line-height: 32px;
+                color: #dce4e8;
+            }
+        }
+        .mini{  
+                padding-top: 15%;
+                position: relative;
+            .picturepart{
+                width: 100%;
+                height: auto;
+
+                img{
+                width: 100%;
+                }
+                .span{
+                    width: 92.5%;
+                    height: 100%;
+                    text-align: center;
+                    background-color: #ffc851;
+                    position: absolute;
+                    top: 0;
+                    padding-top: 48%;
+                    opacity: 0;
+                    transition: all 0.4s;
+                    a{
+                        text-decoration: none;
+                        color: #121618;
+                        font-size: 20px;
+                        transition: 0.4s;
+                        padding-right: 3%;
+                        &:hover{
+                            color: #dce4e8;
+                    
+                    }
+                    
+                       
+                    }
+                 &:hover{
+                     opacity: 0.8;
+                 }
+                }      
+            }
+            .contentpart{
+                text-align: center;
+                padding-top: 7%;
+                 h5{
+                    font-weight: 700;
+                    letter-spacing: 4px;
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: #dce4e8;
+                    padding-bottom: 3%;
+                }
+                 p{
+                 font-size: 14px;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    color: #dce4e8;
+
+                }
+            }
+   
+                
+                   
+                       
+                   
+        }   
+        .directions{
+               
+            width: 30%;
+            height: 40px;
+            padding-left: 0%;
+            position: relative;
+            left: 43%;
+            padding-top: 7%;
+            
+           
+        a{
+            text-decoration: none;
+            color: #dce4e8;
+            font-size: 14px;
+            font-weight: 300;
+            border: 2px solid;
+            border-color: #dce4e8;
+            text-align: center;
+            letter-spacing: 2px;
+            padding: 5%;
+            transition: 0.4s;
+            i{
+                padding-left: 3%;
+            }
+            &:hover{
+                color: #ffc851;
+                border-color: #ffc851;
+            }
+        }
+
+    }
+
+
+               
+
+        
+            
+        
+    }
+}

@@ -1,0 +1,37 @@
+﻿@model VincentRestorant.Models.Sliderfirst
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Create</h2>
+
+<form method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(m => m.Img)
+        <input type="file" name="Img" class="form-control" />
+        @Html.ValidationMessage("Img", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Img2)
+        <input type="file" name="Img2" class="form-control" />
+        @Html.ValidationMessage("Img", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Titlecontent)
+        @Html.TextBoxFor(m => m.Titlecontent, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Titlecontent, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Informatincontent)
+        @Html.TextBoxFor(m => m.Informatincontent, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Informatincontent, null, new { @class = "text-danger" })
+    </div>
+    
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-success  btn-lg btn-block" value="Add" />
+
+    </div>
+</form>

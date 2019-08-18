@@ -1,0 +1,94 @@
+#Sales{
+    width: 100%;
+    height: 700px;
+    background-color: #121618;
+    
+    
+   .Kind{
+       width: 80%;
+       padding-top: 8%;
+
+       .txt{
+            h2{
+            font-size: 30px;
+            line-height: 32px;
+            letter-spacing: 5px;
+            font-weight: 400;
+            color: white;
+           margin-bottom: 4%;
+            text-align: center;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+             }
+        }
+        .title{
+            .carbonora{
+              
+                &:hover{
+                    .mini1{
+                        h4{
+                            color: #ffc851;
+                        }
+                    }
+                }
+              text-align: center;
+                .mini1{
+                    text-align: center;
+                    text-decoration: none;
+                   
+                   
+                   
+                    img{
+                        width: 70%;
+                        height: auto;
+                    }
+                    h4{
+                        font-size: 18px;
+                        line-height: 70px;
+                        letter-spacing: 3px;
+                        font-weight: 700;
+                        color: white;
+                        transition-duration: 0.7s;
+                        text-transform: uppercase;
+                    }
+                    p{
+                        color: white;
+                        font-size: 14px;
+                        line-height: 28px;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                    }
+                    span{
+                        color: white;
+                        font-size: 24px;    
+                        letter-spacing: 2px;
+                    }
+                }
+               
+            }
+           
+        }
+        
+   }
+   .angles{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    display: block;
+    content: "";
+    left: 0;
+    border: solid transparent;
+    border-width: 10px 0;
+    background-image: linear-gradient(rgba(18,22,24,1), rgba(18,22,24,1)), linear-gradient(-45deg, transparent 75%, rgba(18,22,24,1) 75%), linear-gradient(45deg, transparent 75%, rgba(18,22,24,1) 75%);
+    background-color: #121618;
+    background-color: hsla(0, 0%, 0%, 0);
+    background-repeat: repeat, repeat-x, repeat-x, repeat-x, repeat-x;
+    background-position: 0 0, 0 0, 0 0, 0 100%, 0 100%;
+    background-size: auto auto, 16px 16px, 16px 16px, 16px 16px, 16px 16px;
+    background-clip: padding-box, border-box, border-box, border-box, border-box;
+    background-origin: padding-box, border-box, border-box, border-box, border-box;
+    z-index: 60;
+    transform: rotate(180deg);
+    bottom: -107%;
+}
+}

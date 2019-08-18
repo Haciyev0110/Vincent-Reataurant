@@ -1,0 +1,350 @@
+body{
+    background-color: #121618;
+}
+
+
+@import "mobHeader";
+@import "headerCon";
+@import "footer";
+@import "backtop";
+@import "aboutt1";
+@import "aboutcontent1";
+@import "aboutslider2";
+@import "partner";
+@import "meetourteem";
+@import "iformation";
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+    #aboutslider{
+        .first{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+    #contentpart{
+        width: 100%;
+        height: auto;
+        padding-top: 6%;
+        padding-bottom: 6%;
+        background-color: #121618;
+        .title1{
+            h2{
+               
+                letter-spacing: 2px;
+                font-size: 30px;
+               
+            }
+        }
+        .title2{
+                padding-left: 2%;
+                padding-right: 2%;
+                padding-top: 6%;
+           
+        }
+        .imgborder{
+            padding-top: 6%;
+            padding-bottom: 6%;
+        }
+        .title3{
+            text-align: center;
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-top: 4%;
+            padding-bottom: 4%;
+          
+        }
+        .picturepart{
+            width: 100%;
+            padding-top: 5%;
+            text-align: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            img{
+                width: 100%;
+            }
+        }
+        .picturepart2{
+            float: left;
+        }
+        .contactext{
+            .bigtext{
+                        text-align: center;
+                        padding-left: 0;
+                        padding-top: 21%;
+                h4{
+                    letter-spacing: 3px;
+                }
+            }
+            .bigtext2{
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .smalltext{
+                    padding-left: 2%;
+                    padding-top: 5%;
+                    padding-right: 2%;
+              
+            }
+            .smalltext2{
+                padding-left: 3%;
+                padding-right: 2%;
+            }
+            .directions{
+                   
+                    width: 80%;
+                    top: 40%;
+                    left: 17.5%;
+                    padding-bottom: 52%;
+                a{
+                    text-decoration: none;
+                    color: #dce4e8;
+                    font-size: 14px;
+                    font-weight: 300;
+                    border: 2px solid;
+                    border-color: #dce4e8;
+                    text-align: center;
+                    letter-spacing: 2px;
+                    padding: 6%;
+                    transition: 0.4s;
+                    i{
+                        padding-left: 3%;
+                    }
+                    &:hover{
+                        color: #ffc851;
+                        border-color: #ffc851;
+                    }
+                }
+    
+            }
+            .directions2{
+                left: 18%;
+                width: 66%;
+            }
+        }
+    }
+    #aboutslidersecond{
+        width: 100;
+        height: auto;
+        padding-top: 6%;
+        padding-bottom: 6%;
+        background-image: url("../../images/Background/back_1.jpg");
+        background-position: center;
+        background-size: cover;
+        .main{
+            width: 100%;
+            height: auto;
+            .mini{
+                .minititle{
+                    h6{
+                        color: #121618;
+                        line-height: 32px;
+                        text-align: center;
+                        letter-spacing: 3px;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+                .htext{
+                        padding-top: 3%;
+                    h1{
+                        color: #121618;
+                        text-align: center;
+                        letter-spacing: 8px;
+                        font-size: 40px;
+                        line-height: 44px;
+                        font-weight: 500;
+                    }
+                }
+                .backimage{
+                    width: 76%;
+                    position: relative;
+                    left: 12%;
+                    padding-top: 9%;
+                }
+                .smaltext{
+                    padding-top: 2.5%;
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 9%;
+                    p{
+                        color: rgb(18, 22, 24);
+                        font-size: 16px;
+                        font-weight: 300;
+                        line-height: 28px;
+                        text-align: center;
+                    }
+                }
+                .legend{
+                    width: 100%;
+                    position: relative;
+                    left: 0;
+                    padding-top: 2%;
+                    .picture{
+                        width:  26%;
+                        display: inline-block;
+                        img{
+                            width: 90%;
+                            display: inline-block;
+                            border-radius: 50%;
+                        }
+                    }
+                   
+                    .text{
+                        display: inline-block;
+                        padding-top: 2%;
+                        padding-left: 2%;
+                        span{
+                            font-size: 14px;
+                            line-height: 24px;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #Partner{
+        width: 100%;
+        height: auto;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        background-color: #121618;
+    
+        .main{
+            width: 95%;
+            height: auto;
+            .picturepart{
+                width: 100%;
+                height: auto;
+                padding-bottom: 8%;
+                padding-top: 4%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #meetour{
+        width: 100%;
+        height: auto;
+        background-color: #121618;
+        .maindiv{
+            width: 100%;
+            height: auto;
+            padding-top: 4%;
+            padding-bottom: 12%;
+            .htext{
+                h2{
+                    text-align: center;
+                    letter-spacing: 4px;
+                    font-size: 25px;
+                    line-height: 32px;
+                    color: #dce4e8;
+                }
+            }
+            .mini{  
+                    padding-top: 15%;
+                    position: relative;
+                .picturepart{
+                    width: 100%;
+                    height: auto;
+    
+                    img{
+                    width: 100%;
+                    }
+                    .span{
+                        width: 92.5%;
+                        height: 100%;
+                        text-align: center;
+                        background-color: #ffc851;
+                        position: absolute;
+                        top: 0;
+                        padding-top: 48%;
+                        opacity: 0;
+                        transition: all 0.4s;
+                        a{
+                            text-decoration: none;
+                            color: #121618;
+                            font-size: 20px;
+                            transition: 0.4s;
+                            padding-right: 3%;
+                            &:hover{
+                                color: #dce4e8;
+                        
+                        }
+                        
+                           
+                        }
+                     &:hover{
+                         opacity: 0.8;
+                     }
+                    }      
+                }
+                .contentpart{
+                    text-align: center;
+                    padding-top: 7%;
+                     h5{
+                        font-weight: 700;
+                        letter-spacing: 4px;
+                        font-size: 18px;
+                        line-height: 18px;
+                        color: #dce4e8;
+                        padding-bottom: 3%;
+                    }
+                     p{
+                     font-size: 14px;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        color: #dce4e8;
+    
+                    }
+                }
+       
+                    
+                       
+                           
+                       
+            }   
+            .directions{
+                   
+                width: 67%;
+                height: 40px;
+                padding-left: 0%;
+                position: relative;
+                left: 26%;
+                padding-top: 10%;
+                padding-bottom: 17%;
+                
+               
+            a{
+                text-decoration: none;
+                color: #dce4e8;
+                font-size: 14px;
+                font-weight: 300;
+                border: 2px solid;
+                border-color: #dce4e8;
+                text-align: center;
+                letter-spacing: 2px;
+                padding: 5%;
+                transition: 0.4s;
+                i{
+                    padding-left: 3%;
+                }
+                &:hover{
+                    color: #ffc851;
+                    border-color: #ffc851;
+                }
+            }
+    
+        }
+    
+    
+                   
+    
+            
+                
+            
+        }
+    }
+}

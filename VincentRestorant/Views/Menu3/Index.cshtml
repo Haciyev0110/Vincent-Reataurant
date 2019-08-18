@@ -1,0 +1,242 @@
+﻿@using VincentRestorant.Models;
+@model VincentRestorant.ViewModel.HomeIndexVM
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Discover   Our MEnu    start -->
+<section id="discmenu">
+    <div class="container menublock">
+        <div class="row text">
+            <div class="col-md-12 h3text">
+                <h3>CHOOSE OUR AWESOME PIZZA</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Discover   Our MEnu    end -->
+<!-- Menu3 part1 section started -->
+<section id="bitter">
+    <div class="container-fluid menu3">
+        <div class="row mini1">
+            <div class="col-md-5 bigimg">
+                <div class="pizimg">
+                </div>
+            </div>
+            <div class="col-md-7    contenttext">
+
+                <div class="row menulists">
+                    @foreach (var item in Model.propname)
+                    {
+                        <div class="col-md-6 mini">
+                            <a href="@Url.Action("Index","Singproduct",new {id=item.ID })">
+                                @item.Name
+                                <div class="borderrr"></div>
+
+                                <span>$@item.ProductSizes.First().Price</span>
+                            </a>
+                            <div class="text1">
+                                @item.Inkrudent
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Menu3 part1 section End -->
+<!-- Menu3 part2 section started -->
+<section id="bitter2">
+    <div class="container-fluid menu3">
+        <div class="row mini1">
+            <div class="col-md-7    contenttext">
+
+                <div class="row menulists">
+                    @foreach (var item in Model.propname2)
+                    {
+                        <div class="col-md-6 mini">
+                            <a href="@Url.Action("Index","Singproduct",new {id=item.ID })">
+                                @item.Name
+                                <div class="borderrr"></div>
+
+                                <span>$@item.ProductSizes.First().Price</span>
+                            </a>
+                            <div class="text1">
+                                @item.Inkrudent
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+
+            </div>
+            <div class="col-md-5 bigimg2">
+                <div class="pizimg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Menu3  part2  section End -->
+<!-- Menu3 part3 section started -->
+<section id="bitter3">
+    <div class="container-fluid menu3">
+        <div class="row mini1">
+            <div class="col-md-5 bigimg3">
+                <div class="pizimg">
+                </div>
+            </div>
+            <div class="col-md-7    contenttext">
+
+                <div class="row menulists">
+                    @foreach (var item in Model.propname3)
+                    {
+                        <div class="col-md-6 mini">
+                            <a href="@Url.Action("Index","Singproduct",new {id=item.ID })">
+                                @item.Name
+                                <div style="width:38%" class="borderrr"></div>
+
+                                <span>$2.90</span>
+                            </a>
+                            <div class="text1">
+                                Classic marinara sauce, authentic old-world pepperoni
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="angle4"></div>
+</section>
+<!-- Menu3 part3 section End -->
+<!-- discmenu2  start -->
+<section id="discmenu">
+    <div class="container menublock">
+        <div class="row text">
+            <div class="col-md-12 h3text">
+                <h3>DISCOVER OUR MENU</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- discmenu2  end -->
+<!-- Section    Our Menu    Start -->
+<section id="ourMenu2">
+    <div class="container   discover">
+
+        <div class="row menukind">
+            <div class="col-md-12">
+
+                <ul class="menuList">
+                    <li class="active" data-id="1">Burgers</li>
+                    <li data-id="2"> DESSERTS</li>
+                    <li data-id="3"> DRINKS</li>
+                    <li data-id="4">PASTA</li>
+                    <li data-id="5">PIZZAS</li>
+                    <li data-id="6">SALADS</li>
+                </ul>
+                </ul>
+
+
+            </div>
+        </div>
+        @foreach (var item in Model.categories)
+        {
+            int i = 0;
+
+            <div class="cotainer  dataId1  recipes" data-id="@item.ID">
+                <div class="row ourmenupizza">
+                    @foreach (var pro in Model.product)
+                    {
+                        if (pro.Categories_ID == item.ID && i < 6)
+                        {
+                            i++;
+                            <div class="col-md-6 burger">
+                                <div class="row">
+                                    <div class="col-md 6">
+                                        <div class="picturepart">
+                                            <img src="~/assets/Products/@pro.Img_producr" alt="">
+                                            <span class="productBasket" data-proId="@pro.ID">
+                                                <img class="spanimage" src="~/assets/images/icons/iconminicart.png" alt="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="contentpart">
+                                            <a href="@Url.Action("Index","Singproduct",new {id=pro.ID })">
+                                                <h4>@pro.Name</h4>
+                                            </a>
+
+                                            <p>@pro.Mini_text</p>
+                                            <span>$@pro.ProductSizes.First().Price</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        }
+                    }
+                </div>
+            </div>
+        }
+
+
+        <a href="@Url.Action("Index","Menu1")">
+            <div class="view">
+                VIEW ALL <i class="fas fa-angle-right"></i>
+
+            </div>
+        </a>
+    </div>
+
+</section>
+<!-- Section    Our Menu    End -->
+<!-- The    Text    Information Start -->
+<section id="Information">
+    <div class="container">
+        <div class="row  foods">
+            @foreach (var item in Model.information)
+            {
+                <div class="col-md-4 ">
+                    <div class="qualityfood">
+                        <div class="mini1">
+                            <img src="~/assets/images/icons/@item.Icon_img" alt="">
+                            <h4>@item.Titlecontent</h4>
+                            <p>
+                              @item.Informationcontent
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+</section>
+<!-- The    Text    Information End -->
+
+@section    Javascript{
+
+
+
+    <script src="~/Scripts/main.js"></script>
+}

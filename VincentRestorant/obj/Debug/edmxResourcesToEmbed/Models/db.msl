@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VincentRestourantModelStoreContainer" CdmEntityContainer="VincentRestourantEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Admin">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adres_First">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Adres_First">
+        <MappingFragment StoreEntitySet="Adres_First">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Clas" ColumnName="Clas" />
+          <ScalarProperty Name="Clas2" ColumnName="Clas2" />
+          <ScalarProperty Name="WorkingHouse" ColumnName="WorkingHouse" />
+          <ScalarProperty Name="WorkingTime" ColumnName="WorkingTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Information">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Information">
+        <MappingFragment StoreEntitySet="Information">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Icon_img" ColumnName="Icon_img" />
+          <ScalarProperty Name="Titlecontent" ColumnName="Titlecontent" />
+          <ScalarProperty Name="Informationcontent" ColumnName="Informationcontent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordersitems">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Ordersitem">
+        <MappingFragment StoreEntitySet="Ordersitems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Orders_ID" ColumnName="Orders_ID" />
+          <ScalarProperty Name="Productsize_Id" ColumnName="Productsize_Id" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Orderprice" ColumnName="Orderprice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Partners">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Partner">
+        <MappingFragment StoreEntitySet="Partner">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Categories_ID" ColumnName="Categories_ID" />
+          <ScalarProperty Name="Mini_text" ColumnName="Mini_text" />
+          <ScalarProperty Name="Big_text" ColumnName="Big_text" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Img_producr" ColumnName="Img_producr" />
+          <ScalarProperty Name="Inkrudent" ColumnName="Inkrudent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSizes">
+      <EntityTypeMapping TypeName="VincentRestourantModel.ProductSize">
+        <MappingFragment StoreEntitySet="ProductSizes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Size_ID" ColumnName="Size_ID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Second_Slider">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Second_Slider">
+        <MappingFragment StoreEntitySet="Second_Slider">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="Clas" ColumnName="Clas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sizes">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Size">
+        <MappingFragment StoreEntitySet="Sizes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sliderfirsts">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Sliderfirst">
+        <MappingFragment StoreEntitySet="Sliderfirst">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="Titlecontent" ColumnName="Titlecontent" />
+          <ScalarProperty Name="Informatincontent" ColumnName="Informatincontent" />
+          <ScalarProperty Name="Img2" ColumnName="Img2" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="VincentRestourantModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="VincentRestourantModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

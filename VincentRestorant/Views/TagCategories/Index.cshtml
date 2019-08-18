@@ -1,0 +1,209 @@
+﻿@using VincentRestorant.Models;
+@model VincentRestorant.ViewModel.HomeIndexVM
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<section id="discmenu">
+    <div class="container menublock">
+        <div class="row text">
+            <div class="col-md-12 h3text">
+                <h3>@ViewBag.Cat.Name</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Discover   Our MEnu    end -->
+<!-- section    shop    start -->
+<section id="Shoplist">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-8 rowpart1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="notes">
+                            <p>
+                                Showing 1–8 of 72 results
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @foreach (var item in Model.product)
+                    {
+                        <div class="col-md-6" style="padding-bottom: 20%">
+                            <div class="mini">
+                                <div class="picturepart">
+                                    <img src="~/assets/Products/@item.Img_producr" alt="">
+                                </div>
+                                <div class="contentpart">
+                                    <h2 style="letter-spacing:2px">
+                                        <a href="@Url.Action("Index","Singproduct",new { id=item.ID})">@item.Name</a>
+                                    </h2>
+                                    <p>@item.Mini_text</p>
+                                    <span>
+                                        <span>$ </span>@item.ProductSizes.First().Price
+                                    </span>
+                                    <div class="directions  productBasket" data-proId="@item.ID">
+                                        <a style="cursor:pointer">
+                                            Add to cart
+                                            <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="Blog">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="categories">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="text">
+                                                    <h5>
+                                                        BLOG CATEGORIES
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="miniblog">
+                                                    <ul>
+                                                        @foreach (var item in Model.categories)
+                                                        {
+                                                            <li>
+                                                                <a href="@Url.Action("Index","TagCategories",new {categ=item.ID })">@item.Name</a>
+                                                                <i class="fas fa-angle-right"></i>
+                                                            </li>
+                                                        }
+
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="lists">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text">
+                                        <h5>TAGS</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="minitags">
+                                        @foreach (var item in Model.categories)
+                                        {
+                                            <a href="@Url.Action("Index","TagCategories",new {categ=item.ID })">@item.Name</a>
+
+                                        }
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 15%;">
+                        <div class="FEATURED">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="post">
+                                        <div class="row">
+                                            <div class="col-md-12  ">
+                                                <div class="text">
+                                                    <h5>FEATURED MENU ITEMS</h5>
+
+                                                </div>
+                                            </div>
+
+                                            @foreach (var item in Model.prop)
+                                            {
+                                                <div class="col-md-4    col-6">
+                                                    <div class="picturepart">
+                                                        <img src="~/assets/Products/@item.Img_producr" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8    col-6">
+                                                    <div class="contentpart">
+                                                        <a href="@Url.Action("Index","Singproduct",new {id=item.ID })">@item.Name</a>
+                                                        <span>$@item.ProductSizes.First().Price</span>
+                                                    </div>
+                                                </div>
+
+                                            }
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12" style="padding-top: 12%;">
+                <div class="number">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item ">
+                            @if (ViewBag.Page - 1 != 0)
+                            {
+                                <a class="page-link" href="@Url.Action("Index", "TagCategories", new { page = ViewBag.Page - 1 ,    categ=ViewBag.Cat.ID})"><i class="fa fa-chevron-left"></i></a>
+                            }
+
+                        </li>
+                        
+
+
+                        @for (int i = 1; i <= ViewBag.Page; i++)
+                        {
+
+                            <li class="page-item  @(i==ViewBag.Page?"active":"")"><a class="page-link" href="@Url.Action("Index","TagCategories",new { page = i ,    categ=ViewBag.Cat.ID})">@i</a></li>
+                        }
+                        <li class="page-item">
+                            @if (ViewBag.Page + 1 <= ViewBag.TotalPage)
+                            {
+                                <a class="page-link" href="@Url.Action("Index","TagCategories",new { page = ViewBag.Page+1 ,    categ=ViewBag.Cat.ID})"><i class="fa fa-chevron-right"></i></a>
+                            }
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+
+</section>
+@section    Javascript{
+
+
+
+    <script src="~/Scripts/main.js"></script>
+}

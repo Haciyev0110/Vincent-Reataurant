@@ -1,0 +1,86 @@
+﻿   @model VincentRestorant.Models.Product
+
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mini_text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mini_text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inkrudent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inkrudent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Big_text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Big_text)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Img_producr)
+        </dt>
+
+        <dd>
+            <img width="400" src="~/assets/Products/@Model.Img_producr" class="img-thumbnail" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+    </dl>
+</div>
+@foreach (var p in Model.ProductSizes)
+{
+<h3> Olcusu   @p.Size.Name</h3>
+
+
+
+    <h2>Qiymeti</h2>
+    <h3>@p.Price    Azn</h3>
+}
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

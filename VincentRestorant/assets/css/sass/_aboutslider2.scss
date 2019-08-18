@@ -1,0 +1,81 @@
+#aboutslidersecond{
+    width: 100;
+    height: auto;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-image: url("../../images/Background/back_1.jpg");
+    background-position: center;
+    background-size: cover;
+    .main{
+        width: 100%;
+        height: auto;
+        .mini{
+            .minititle{
+                h6{
+                    color: #121618;
+                    line-height: 32px;
+                    text-align: center;
+                    letter-spacing: 3px;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+            .htext{
+                    padding-top: 3%;
+                h1{
+                    color: #121618;
+                    text-align: center;
+                    letter-spacing: 8px;
+                    font-size: 40px;
+                    line-height: 40px;
+                    font-weight: 500;
+                }
+            }
+            .backimage{
+                width: 18%;
+                position: relative;
+                left: 41%;
+                padding-top: 2%;
+            }
+            .smaltext{
+                padding-top: 2.5%;
+                padding-left: 6%;
+                padding-right: 1%;
+                p{
+                    color: rgb(18, 22, 24);
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 28px;
+                    text-align: center;
+                }
+            }
+            .legend{
+                width: 100%;
+                padding-top: 2%;
+                position: relative;
+                .picture{
+                    width:  7%;
+                    display: inline-block;
+                    img{
+                        width: 90%;
+                        display: inline-block;
+                        border-radius: 50%;
+                    }
+                }
+               
+                .text{
+                    display: inline-block;
+                    padding-top: 2%;
+                    text-align: center;
+                    transform: translateY(20%);
+                    span{
+                        font-size: 14px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

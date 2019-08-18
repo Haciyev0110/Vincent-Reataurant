@@ -1,0 +1,82 @@
+@import "mobHeader";
+@import "headerCon";
+@import "footer";
+@import "backtop";
+@import "meetourteem";
+@import "philosopy";
+@import "accordion";
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+    #PHILOSOPHY{
+        width: 100%;
+        height: auto;
+        padding-bottom: 6%;
+        .mini{
+            width: 100%;
+            height: 85%;
+            background-image: url("../../images/Pizzas/16.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+           background-size: cover;
+          
+        }
+        .content{  
+            width: 100%;
+            height: auto;
+            background-color: #23282b;
+            text-align: center;
+            padding-left: 6%;
+            padding-right: 6%;
+            padding-top: 11%;
+        .htext1{  
+           width: 100%;
+           text-align: center;
+           padding-top: 6%;
+           h2{
+               text-align: center;
+               font-size: 24px;
+               line-height: 32px;
+               letter-spacing: 6px;
+               color: #dce4e8;
+           }
+    
+        }
+        .htext2{
+            width: 100%;
+            text-align: center;
+            padding-top: 4%;
+            h6{
+                line-height: 24px;
+                text-align: center;
+                letter-spacing: 2px;
+                color: #dce4e8;
+                font-size: 16px;
+                font-weight: 400;
+    
+            }
+        }   
+        .imgpart{
+            padding-top: 6%;
+        }
+        .ptext{
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 11%;
+            padding-bottom: 1%;
+            p{
+                color: #dce4e8;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 32px;
+                text-align: center;
+            }
+        }
+            
+           
+            
+        }
+        .mini2{
+            background-image: url("../../images/img/img_6.jpg");
+        }
+    }
+}

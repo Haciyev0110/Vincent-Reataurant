@@ -1,0 +1,48 @@
+﻿@model VincentRestorant.Models.Sliderfirst
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<form method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(m => m.Img)
+        <input type="file" name="NewImg" class="form-control" />
+        @Html.HiddenFor(m => m.Img)
+        @Html.ValidationMessage("Img", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <img class="img-thumbnail" src="~/assets/images/slider/@Model.Img" width="150" />
+    </div>
+    <input type="hidden" name="Img" value="@Model.Img" />
+    <input type="hidden" name="Img2" value="@Model.Img2" />
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Img2)
+        <input type="file" name="NewImg2" class="form-control" />
+        @Html.HiddenFor(m => m.Img2)
+        @Html.ValidationMessage("Img", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <img class="img-thumbnail" src="~/assets/images/Pizzas/@Model.Img2" width="150" />
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Titlecontent)
+        @Html.TextBoxFor(m => m.Titlecontent, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Titlecontent, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Informatincontent)
+        @Html.TextBoxFor(m => m.Informatincontent, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Informatincontent, null, new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-success  btn-lg btn-block" value="Edit" />
+
+    </div>
+</form>

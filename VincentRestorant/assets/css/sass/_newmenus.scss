@@ -1,0 +1,73 @@
+#bitter{
+    width: 100%;
+    height: auto;
+    background-color: #121618;
+    .menu3{
+        width: 90%;
+        height: auto;
+        padding-top: 3%;
+        .mini1{
+            .bigimg{
+                padding-right: 0 !important ;
+                padding-top: 5%;
+                
+                .pizimg{
+                    width: 100%;
+                    height: 583px;
+                    background-image: url("../../images/Pizzas/23.jpg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            .contenttext{
+                width: 100%;
+                padding-top: 6%;
+               
+               .menulists{
+                height: auto;
+                background-color: #161c1f;
+                padding-left: 5%;
+                padding-top: 8%;
+                padding-left: 0 !important;
+                .mini{
+                    padding-bottom: 6%;
+                    width: 70%;
+                    a{
+                        text-decoration: none;
+                        color: #dce4e8;
+                        font-size: 16px;
+                        transition: 0.4s;
+                        .borderrr{
+                            width: 43%;
+                            height: 2px;
+                            border-bottom: dotted 2px #dce4e8;
+                            display: inline-block;
+                            opacity: 0.3;
+                        }
+                        span{
+                           
+                            color: #dce4e8;
+                        }
+                        &:hover{
+                            color: #ffc851;
+                            span{
+                                color: #dce4e8;
+                            }
+                        }
+                    }
+                    .text1{
+                        width: 80%;
+                        padding-top: 4%;
+                         color: #dce4e8;
+                        font-size: 14px;
+                    }
+                }
+              
+               }
+              
+            }
+        }
+    }
+
+}
